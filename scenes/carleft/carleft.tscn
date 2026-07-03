@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://bx7thw5wkefxn"]
+
+[ext_resource type="Script" uid="uid://b4aubxout8twf" path="res://scenes/carleft/carleft.gd" id="1_tfxng"]
+
+[sub_resource type="GDScript" id="GDScript_hpfne"]
+script/source = "extends Button
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[node name="carleft" type="Node2D" unique_id=115809439]
+script = ExtResource("1_tfxng")
+
+[node name="lookFront" type="Button" parent="." unique_id=1299905443]
+offset_left = 906.0
+offset_top = -2.0
+offset_right = 1150.0
+offset_bottom = 667.0
+text = "Turn Right (Back to front)"
+script = SubResource("GDScript_hpfne")
+
+[connection signal="pressed" from="lookFront" to="." method="_on_look_front_pressed"]
