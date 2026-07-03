@@ -13,7 +13,7 @@ texture = ExtResource("1_3lwtp")
 
 [node name="lookLeft" type="Button" parent="." unique_id=759517212]
 offset_top = 2.0
-offset_right = 244.0
+offset_right = 146.0
 offset_bottom = 671.0
 text = "Turn Left"
 
@@ -25,13 +25,13 @@ offset_bottom = 136.0
 text = "Look Back"
 
 [node name="lookRight" type="Button" parent="." unique_id=296844915]
-offset_left = 906.0
+offset_left = 1001.0
 offset_top = 1.0
 offset_right = 1150.0
 offset_bottom = 670.0
 text = "Turn Right
 "
 
-[connection signal="pressed" from="lookLeft" to="." method="_on_look_left_button_pressed"]
+[connection signal="pressed" from="lookLeft" to="." method="_on_look_left_pressed"]
 [connection signal="pressed" from="lookBack" to="." method="_on_look_back_pressed"]
-[connection signal="pressed" from="lookRight" to="." method="_on_look_right_button_pressed"]
+[connection signal="pressed" from="lookRight" to="." method="_on_look_right_pressed"]

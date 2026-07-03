@@ -12,16 +12,32 @@ func _ready() -> void:
 #	pass
 
 
-func _on_look_left_button_pressed() -> void:
+func _on_look_left_pressed() -> void:
 	print_debug("look left button pressed")
 	get_tree().change_scene_to_file("res://scenes/carleft/carleft.tscn")
 
 
-func _on_look_right_button_pressed() -> void:
+func _on_look_right_pressed() -> void:
 	print_debug("look right button pressed")
 	get_tree().change_scene_to_file("res://scenes/carright/carright.tscn")
 
 
+#KEY_LEFT
+
 func _on_look_back_pressed() -> void:
 	print_debug("look back button pressed")
 	get_tree().change_scene_to_file("res://scenes/carback/carback.tscn")
+
+# Keyboard / Mouse input
+func _input(event):
+	print(event.as_text())
+	if event.is_action_pressed("ui_left"):
+		print("ui_left occurred!")
+		_on_look_left_pressed()
+	elif event.is_action_pressed("ui_right"):
+		print("ui_right occurred!")
+		_on_look_right_pressed()
+	elif event.is_action_pressed("ui_down"):
+		print("ui_down occurred!")
+		_on_look_back_pressed()
+	
