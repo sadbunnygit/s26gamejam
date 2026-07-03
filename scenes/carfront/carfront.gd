@@ -20,3 +20,8 @@ func _on_look_left_button_pressed() -> void:
 func _on_look_right_button_pressed() -> void:
 	print_debug("look right button pressed")
 	get_tree().change_scene_to_file("res://scenes/carright/carright.tscn")
+
+
+func _on_look_back_pressed() -> void:
+	print_debug("look back button pressed")
+	get_tree().change_scene_to_file("res://scenes/carback/carback.tscn")

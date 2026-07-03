@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://c5dkdcoerkbje"]
+
+[ext_resource type="Script" uid="uid://dif8gmwc54wks" path="res://scenes/carback/carback.gd" id="1_iuw5m"]
+
+[node name="carback" type="Node2D" unique_id=115809439]
+script = ExtResource("1_iuw5m")
+
+[node name="lookFront" type="Button" parent="." unique_id=1299905443]
+offset_left = 340.0
+offset_top = 7.0
+offset_right = 814.0
+offset_bottom = 347.0
+text = "Turn Back to front"
+
+[connection signal="pressed" from="lookFront" to="." method="_on_look_front_pressed"]

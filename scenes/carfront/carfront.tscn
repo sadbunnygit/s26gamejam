@@ -7,8 +7,8 @@
 script = ExtResource("1_fcdvi")
 
 [node name="CarfrontPlaceholDr" type="Sprite2D" parent="." unique_id=981950786]
-position = Vector2(579, 536.25)
-scale = Vector2(1.7808642, 2.8466668)
+position = Vector2(579, 422.75)
+scale = Vector2(1.7808642, 2.2413332)
 texture = ExtResource("1_3lwtp")
 
 [node name="lookLeft" type="Button" parent="." unique_id=759517212]
@@ -16,6 +16,13 @@ offset_top = 2.0
 offset_right = 244.0
 offset_bottom = 671.0
 text = "Turn Left"
+
+[node name="lookBack" type="Button" parent="." unique_id=1751213197]
+offset_left = 350.0
+offset_top = 3.0
+offset_right = 798.0
+offset_bottom = 136.0
+text = "Look Back"
 
 [node name="lookRight" type="Button" parent="." unique_id=296844915]
 offset_left = 906.0
@@ -26,4 +33,5 @@ text = "Turn Right
 "
 
 [connection signal="pressed" from="lookLeft" to="." method="_on_look_left_button_pressed"]
+[connection signal="pressed" from="lookBack" to="." method="_on_look_back_pressed"]
 [connection signal="pressed" from="lookRight" to="." method="_on_look_right_button_pressed"]
