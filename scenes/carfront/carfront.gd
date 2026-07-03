@@ -14,9 +14,9 @@ func _ready() -> void:
 
 func _on_look_left_button_pressed() -> void:
 	print_debug("look left button pressed")
-	get_tree().change_scene_to_file("res://src/carleft.tscn")
+	get_tree().change_scene_to_file("res://scenes/carleft/carleft.tscn")
 
 
 func _on_look_right_button_pressed() -> void:
 	print_debug("look right button pressed")
-	get_tree().change_scene_to_file("res://src/carright.tscn")
+	get_tree().change_scene_to_file("res://scenes/carright/carright.tscn")

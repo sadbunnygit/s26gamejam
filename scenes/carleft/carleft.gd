@@ -13,4 +13,4 @@ func _ready() -> void:
 
 func _on_look_front_pressed() -> void:
 	print_debug("look front button pressed")
-	get_tree().change_scene_to_file("res://src/carfront.tscn")
+	get_tree().change_scene_to_file("res://scenes/carfront/carfront.tscn")

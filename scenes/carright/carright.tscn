@@ -2,20 +2,6 @@
 
 [ext_resource type="Script" uid="uid://dvik6w6v53alt" path="res://scenes/carright/carright.gd" id="1_1q0m0"]
 
-[sub_resource type="GDScript" id="GDScript_pa5p5"]
-script/source = "extends Button
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-"
-
 [node name="carRight" type="Node2D" unique_id=1534224873]
 script = ExtResource("1_1q0m0")
 
@@ -25,6 +11,5 @@ offset_top = -4.0
 offset_right = 253.0
 offset_bottom = 665.0
 text = "Turn Left (Back to front)"
-script = SubResource("GDScript_pa5p5")
 
 [connection signal="pressed" from="lookFront" to="." method="_on_look_front_pressed"]

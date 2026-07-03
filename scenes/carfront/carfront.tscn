@@ -1,36 +1,21 @@
 [gd_scene format=3 uid="uid://bxjoyxplckah6"]
 
-[ext_resource type="Script" uid="uid://j1o8f51nm2kt" path="res://scenes/carfront/carfront.gd" id="1_ul7xf"]
-[ext_resource type="Texture2D" uid="uid://8upt5ngubh8k" path="res://assets/carfrontPLACEHOLDr.png" id="2_jiejl"]
-
-[sub_resource type="GDScript" id="GDScript_ugrl1"]
-script/source = "extends Button
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-"
+[ext_resource type="Texture2D" uid="uid://8upt5ngubh8k" path="res://scenes/carfront/carfrontPLACEHOLDER.png" id="1_3lwtp"]
+[ext_resource type="Script" uid="uid://j1o8f51nm2kt" path="res://scenes/carfront/carfront.gd" id="1_fcdvi"]
 
 [node name="carfront" type="Node2D" unique_id=1941058003]
-script = ExtResource("1_ul7xf")
+script = ExtResource("1_fcdvi")
 
 [node name="CarfrontPlaceholDr" type="Sprite2D" parent="." unique_id=981950786]
-position = Vector2(576.128, 334.75)
-scale = Vector2(1.772, 1.772)
-texture = ExtResource("2_jiejl")
+position = Vector2(579, 536.25)
+scale = Vector2(1.7808642, 2.8466668)
+texture = ExtResource("1_3lwtp")
 
 [node name="lookLeft" type="Button" parent="." unique_id=759517212]
 offset_top = 2.0
 offset_right = 244.0
 offset_bottom = 671.0
 text = "Turn Left"
-script = SubResource("GDScript_ugrl1")
 
 [node name="lookRight" type="Button" parent="." unique_id=296844915]
 offset_left = 906.0
@@ -39,7 +24,6 @@ offset_right = 1150.0
 offset_bottom = 670.0
 text = "Turn Right
 "
-script = SubResource("GDScript_ugrl1")
 
 [connection signal="pressed" from="lookLeft" to="." method="_on_look_left_button_pressed"]
 [connection signal="pressed" from="lookRight" to="." method="_on_look_right_button_pressed"]
