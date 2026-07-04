@@ -32,8 +32,6 @@ scale = Vector2(0.56952775, 0.7943389)
 curve = SubResource("Curve2D_hnajx")
 
 [node name="mobLoc" type="PathFollow2D" parent="mobPath1" unique_id=1443862268]
-position = Vector2(677.7545, -270.66534)
-rotation = 3.024151
 rotates = false
 loop = false
 script = ExtResource("2_y3lde")
@@ -43,10 +41,6 @@ mob_scene = ExtResource("3_cimb5")
 curve = SubResource("Curve2D_77xqt")
 
 [node name="mobLoc" type="PathFollow2D" parent="mobPath2" unique_id=471180959]
-position = Vector2(93, 70)
-rotation = 2.9784975
-scale = Vector2(0.57321143, 0.79168475)
-skew = 0.078703165
 rotates = false
 loop = false
 script = ExtResource("2_y3lde")
