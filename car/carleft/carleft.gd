@@ -22,7 +22,8 @@ func spawn_mob():
 
 func _on_look_front_pressed() -> void:
 	print_debug("look front button pressed")
-	WorldManager.load_world(WorldManager.cfront)
+	if get_parent() and get_parent().has_method("viewFront"):
+		get_parent().viewFront()
 
 
 # Keyboard / Mouse input

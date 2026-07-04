@@ -23,15 +23,18 @@ func spawn_mob():
 # Look around buttons 
 func _on_look_left_pressed() -> void:
 	print_debug("look left button pressed")
-	WorldManager.load_world(WorldManager.cleft)
+	if get_parent() and get_parent().has_method("viewLeft"):
+		get_parent().viewLeft()
 
 func _on_look_right_pressed() -> void:
 	print_debug("look right button pressed")
-	WorldManager.load_world(WorldManager.cright)
+	if get_parent() and get_parent().has_method("viewRight"):
+		get_parent().viewRight()
 	
 func _on_look_back_pressed() -> void:
 	print_debug("look back button pressed")
-	WorldManager.load_world(WorldManager.cback)
+	if get_parent() and get_parent().has_method("viewBack"):
+		get_parent().viewBack()
 
 # other interaction
 func _on_eject_pressed() -> void:
