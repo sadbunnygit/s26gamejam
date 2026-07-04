@@ -52,7 +52,7 @@ position = Vector2(692, 283)
 scale = Vector2(0.56952775, 0.7943389)
 curve = SubResource("Curve2D_0yogx")
 
-[node name="mobSpawnLoc" type="PathFollow2D" parent="mobPath" unique_id=1223515463]
+[node name="mobLoc" type="PathFollow2D" parent="mobPath" unique_id=1223515463]
 position = Vector2(677.7545, -270.66534)
 rotation = 3.024151
 
