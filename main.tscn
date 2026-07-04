@@ -17,11 +17,11 @@ carRight = ExtResource("5_272bh")
 position = Vector2(860, 538)
 
 [node name="spawnTimer" type="Timer" parent="." unique_id=2078507495]
-wait_time = 8.0
+wait_time = 20.0
 autostart = true
 
 [node name="gameTimer" type="Timer" parent="." unique_id=765436028]
-wait_time = 30.0
+wait_time = 64.0
 autostart = true
 
 [connection signal="timeout" from="spawnTimer" to="." method="_on_spawntimer_timeout"]

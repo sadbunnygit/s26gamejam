@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c0qdmh26ff1s8" path="res://badguy/mob.gd" id="1_3mflk"]
 [ext_resource type="PackedScene" uid="uid://c3kparcjfyubo" path="res://badguy/interact.tscn" id="2_plv4x"]
+[ext_resource type="PackedScene" uid="uid://skpwy4scnbr7" path="res://badguy/dialogue.tscn" id="3_qwcij"]
 [ext_resource type="Texture2D" uid="uid://bnushej7d6tg1" path="res://assets/zero.jpg" id="4_fgj1c"]
 [ext_resource type="Texture2D" uid="uid://dpwtrknqsexdj" path="res://assets/one.png" id="5_qwcij"]
 [ext_resource type="Texture2D" uid="uid://kdgwa5op7plv" path="res://assets/two.webp" id="6_ygbpr"]
@@ -60,6 +61,7 @@ animations = [{
 [node name="Mob" type="Node2D" unique_id=1486219742]
 script = ExtResource("1_3mflk")
 interact = ExtResource("2_plv4x")
+dialogue = ExtResource("3_qwcij")
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1480124001]
@@ -79,7 +81,7 @@ offset_right = 150.0
 offset_bottom = 121.0
 
 [node name="Timer" type="Timer" parent="." unique_id=1775691641]
-wait_time = 8.0
+wait_time = 10.0
 
 [connection signal="gui_input" from="Control" to="." method="_on_control_gui_input"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

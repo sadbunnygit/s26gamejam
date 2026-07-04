@@ -15,3 +15,4 @@ func _on_getaway_pressed() -> void:
 func _on_letin_pressed() -> void:
 	if mob:
 		mob.enterCar()
+	

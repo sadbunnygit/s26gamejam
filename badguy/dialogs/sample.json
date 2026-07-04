@@ -1,0 +1,37 @@
+{
+	"start": 
+	{
+		"text": "Hello there!",
+		"options": 
+		[
+			{
+				"text": "General Kenobi",
+				"next": "greeting"
+			},
+			{
+				"text": "Leave.",
+				"next": "leave"
+			}
+		]
+	},
+
+	"greeting": {
+		"text": "Nice to meet you.",
+		"options": [
+			{
+				"text": "Continue",
+				"next": "end"
+			}
+		]
+	},
+
+	"leave": {
+		"text": "Goodbye.",
+		"options": []
+	},
+
+	"end": {
+		"text": "The conversation is over.",
+		"options": []
+	}
+}

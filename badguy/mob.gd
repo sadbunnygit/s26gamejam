@@ -1,6 +1,7 @@
 extends Node2D
 
 @export var interact: PackedScene
+@export var dialogue: PackedScene
 var type : String
 var main
 
@@ -57,7 +58,6 @@ func enterCar() -> void:
 	print_debug("trying to entering car")
 	if (main.passenger != null):
 		return # dont work!
-	$Timer.start() #reset
 	if has_node("interact"):
 		get_node("interact").queue_free()
 	if has_node("Control"):
@@ -67,3 +67,7 @@ func enterCar() -> void:
 	reparent(main) 
 	#get_tree().current_scene.print_tree_pretty()
 	main.newPassenger(self)
+	var dialog = dialogue.instantiate()
+	add_child(dialog)
+	$Timer.start(-20) #reset
+	dialog.global_position = Vector2(0,0)
