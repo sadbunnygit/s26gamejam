@@ -19,9 +19,9 @@ run/main_scene="uid://bfrsjv851nfrf"
 config/features=PackedStringArray("4.7", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 
-[autoload]
+[display]
 
-WorldManager="*uid://bbplti0bbur5e"
+window/stretch/scale=3.68
 
 [dotnet]
 

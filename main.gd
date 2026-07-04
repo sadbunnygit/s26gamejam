@@ -9,6 +9,7 @@ var cback
 var cleft
 var cright
 var passenger
+var hasHuman
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -55,12 +56,18 @@ func viewRight():
 func newPassenger(mob) -> void:
 	print_debug("new passenger: ", mob)
 	passenger = mob
+	passenger.global_position = $pchair.position
+	hasHuman = (passenger.type == "human")
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func eject() -> void:
+	print_debug("ejecting", passenger)
+	if passenger != null:
+		passenger.queue_free()
+	passenger = null
 
 
 func _on_spawn_enemy_pressed() -> void:
 	cfront.spawn_mob()
+
+func lose():
+	get_tree().change_scene_to_file("res://loser.tscn")

@@ -1,16 +1,26 @@
 extends Node2D
 
 @export var interact: PackedScene
+var type : String
+var main
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	print_debug("badguy entered")
+	get_tree().current_scene.print_tree_pretty()
+	main = self.get_parent().get_parent().get_parent().get_parent()# should make it to main
 	$AnimatedSprite2D.animation = "default"
 	$AnimatedSprite2D.play()
+	$Timer.start()
+	
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	$AnimatedSprite2D.animation = "default"
+func _on_timer_timeout() -> void:
+	print_debug("timer timeout")
+	if type == "human":
+		return
+	print_debug("monster kills")
+	main.lose()
 
 var already_clicked = false
 func _on_control_gui_input(event: InputEvent) -> void:
@@ -29,6 +39,7 @@ func _on_control_gui_input(event: InputEvent) -> void:
 	
 func leave() -> void:
 	print_debug("leaving")
+	$Timer.stop()
 	already_clicked = false
 	$AnimatedSprite2D.stop()
 	if has_node("interact"):
@@ -38,14 +49,20 @@ func leave() -> void:
 	queue_free()
 
 func enterCar() -> void:
-	print_debug("entering car")
+	print_debug("trying to entering car")
+	if (main.passenger != null):
+		return # dont work!
+	#$Timer.stop()
 	if has_node("interact"):
 		get_node("interact").queue_free()
 	if has_node("Control"):
 		get_node("Control").queue_free()
-	print(self)
-	get_tree().current_scene.print_tree_pretty()
-	var main = self.get_parent().get_parent().get_parent().get_parent()# should make it to main
+	#print(self)
+	#get_tree().current_scene.print_tree_pretty()
 	reparent(main) 
-	get_tree().current_scene.print_tree_pretty()
+	#get_tree().current_scene.print_tree_pretty()
 	main.newPassenger(self)
+
+
+
+	

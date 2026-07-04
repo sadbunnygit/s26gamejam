@@ -4,8 +4,9 @@ extends PathFollow2D
 @export var mob_scene: PackedScene
 var speed = 1 # how fast it will travel
 
-func spawn_mob():
+func spawn_mob(s : int = 1):
 	print_debug("mob spawned")
+	speed = s
 	# Create a new instance of the Mob scene.
 	var mob = mob_scene.instantiate()
 	progress_ratio = 0 # start at the beginning of the path

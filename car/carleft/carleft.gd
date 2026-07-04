@@ -4,7 +4,6 @@ extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	print_debug("NEW CAR LEFT LOADED")
-	spawn_mob()
 
 func spawn_mob():
 	var path = randi_range(1,2) 

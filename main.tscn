@@ -21,4 +21,7 @@ offset_right = 869.0
 offset_bottom = 628.0
 icon = ExtResource("6_7mycd")
 
+[node name="pchair" type="Marker2D" parent="." unique_id=885465441]
+position = Vector2(860, 538)
+
 [connection signal="pressed" from="spawnEnemy" to="." method="_on_spawn_enemy_pressed"]

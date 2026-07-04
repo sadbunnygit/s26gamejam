@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://4n1fux6sci1g"]
+
+[sub_resource type="DrawableTexture2D" id="DrawableTexture2D_87jk0"]
+
+[node name="start" type="Node2D" unique_id=2133175486]
+
+[node name="Button" type="Button" parent="." unique_id=1046667491]
+offset_left = 183.0
+offset_top = 120.000046
+offset_right = 307.0
+offset_bottom = 192.00005
+scale = Vector2(5.5840783, 5.3053226)
+text = "START"
+icon = SubResource("DrawableTexture2D_87jk0")

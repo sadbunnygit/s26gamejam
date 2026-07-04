@@ -3,7 +3,7 @@ extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	print_debug("NEW CAR FRONT LOADED")
-	spawn_mob()
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta: float) -> void:	
@@ -14,10 +14,10 @@ func spawn_mob():
 	var path = randi_range(1,2) 
 	if (path == 1):
 		print_debug("spawning mob from front path 1")
-		$mobPath1/mobLoc.spawn_mob()
+		$mobPath1/mobLoc.spawn_mob(1)
 	elif (path == 2):
 		print_debug("spawning mob from front path 2")
-		$mobPath2/mobLoc.spawn_mob()
+		$mobPath2/mobLoc.spawn_mob(1)
 		
 
 # Look around buttons 
@@ -39,6 +39,7 @@ func _on_look_back_pressed() -> void:
 # other interaction
 func _on_eject_pressed() -> void:
 	print_debug("eject pressed")
+	get_parent().eject()
 
 
 # Keyboard / Mouse input
