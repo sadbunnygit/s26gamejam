@@ -1,6 +1,20 @@
 [gd_scene format=3 uid="uid://bsslfckg7pp6w"]
 
 [ext_resource type="Script" uid="uid://dvik6w6v53alt" path="res://car/carright/carright.gd" id="1_1q0m0"]
+[ext_resource type="Script" uid="uid://5fttvvn3n5pe" path="res://car/carfront/mob_loc.gd" id="2_4sksy"]
+[ext_resource type="PackedScene" uid="uid://c750l2865gfdp" path="res://badguy/mob.tscn" id="3_sm2rh"]
+
+[sub_resource type="Curve2D" id="Curve2D_y55lq"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 677.7545, -270.66534, 0, 0, 0, 0, 261.62024, -221.5679, 0, 0, 0, 0, 147.4906, -140.99776, 0, 0, 0, 0, 80.76868, -49.097443, 0, 0, 0, 0, -17.558472, 15.106903)
+}
+point_count = 5
+
+[sub_resource type="Curve2D" id="Curve2D_p1m6s"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 93, 70, 0, 0, 0, 0, 157, 81, 0, 0, 0, 0, 196, 155, 0, 0, 0, 0, 274, 164, 0, 0, 0, 0, 323, 139, 0, 0, 0, 0, 396, 177, 0, 0, 0, 0, 443, 232, 0, 0, 0, 0, 534, 289, 0, 0, 0, 0, 575, 326)
+}
+point_count = 9
 
 [node name="carRight" type="Node2D" unique_id=1534224873]
 script = ExtResource("1_1q0m0")
@@ -11,5 +25,26 @@ offset_top = -4.0
 offset_right = 253.0
 offset_bottom = 665.0
 text = "Turn Left (Back to front)"
+
+[node name="mobPath1" type="Path2D" parent="." unique_id=1003134964]
+position = Vector2(425, 311)
+curve = SubResource("Curve2D_y55lq")
+
+[node name="mobLoc" type="PathFollow2D" parent="mobPath1" unique_id=181701276]
+position = Vector2(677.7545, -270.66534)
+rotates = false
+loop = false
+script = ExtResource("2_4sksy")
+mob_scene = ExtResource("3_sm2rh")
+
+[node name="mobPath2" type="Path2D" parent="." unique_id=1571313565]
+curve = SubResource("Curve2D_p1m6s")
+
+[node name="mobLoc" type="PathFollow2D" parent="mobPath2" unique_id=192025004]
+position = Vector2(93, 70)
+rotates = false
+loop = false
+script = ExtResource("2_4sksy")
+mob_scene = ExtResource("3_sm2rh")
 
 [connection signal="pressed" from="lookFront" to="." method="_on_look_front_pressed"]

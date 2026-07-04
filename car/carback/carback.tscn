@@ -1,6 +1,14 @@
 [gd_scene format=3 uid="uid://c5dkdcoerkbje"]
 
 [ext_resource type="Script" uid="uid://dif8gmwc54wks" path="res://car/carback/carback.gd" id="1_iuw5m"]
+[ext_resource type="Script" uid="uid://5fttvvn3n5pe" path="res://car/carfront/mob_loc.gd" id="2_jaimd"]
+[ext_resource type="PackedScene" uid="uid://c750l2865gfdp" path="res://badguy/mob.tscn" id="3_4kgja"]
+
+[sub_resource type="Curve2D" id="Curve2D_nhab5"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 221, 7, 0, 0, 0, 0, 186, 31, 0, 0, 0, 0, 179, 76, 0, 0, 0, 0, 216, 104, 0, 0, 0, 0, 224, 139, 0, 0, 0, 0, 205, 205, 0, 0, 0, 0, 226, 268, 0, 0, 0, 0, 278, 300, 0, 0, 0, 0, 374, 303, 0, 0, 0, 0, 401, 375, 0, 0, 0, 0, 386, 421, 0, 0, 0, 0, 349, 432, 0, 0, 0, 0, 270, 510)
+}
+point_count = 13
 
 [node name="carback" type="Node2D" unique_id=115809439]
 script = ExtResource("1_iuw5m")
@@ -11,5 +19,16 @@ offset_top = 7.0
 offset_right = 814.0
 offset_bottom = 347.0
 text = "Turn Back to front"
+
+[node name="mobPath1" type="Path2D" parent="." unique_id=1917408888]
+position = Vector2(0, 1)
+curve = SubResource("Curve2D_nhab5")
+
+[node name="mobLoc" type="PathFollow2D" parent="mobPath1" unique_id=31177118]
+position = Vector2(221, 7)
+rotates = false
+loop = false
+script = ExtResource("2_jaimd")
+mob_scene = ExtResource("3_4kgja")
 
 [connection signal="pressed" from="lookFront" to="." method="_on_look_front_pressed"]

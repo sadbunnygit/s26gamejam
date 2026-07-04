@@ -46,7 +46,7 @@ offset_right = 150.0
 offset_bottom = 121.0
 
 [node name="Timer" type="Timer" parent="." unique_id=1775691641]
-wait_time = 10.0
+wait_time = 8.0
 
 [connection signal="gui_input" from="Control" to="." method="_on_control_gui_input"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

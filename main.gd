@@ -68,6 +68,20 @@ func eject() -> void:
 
 func _on_spawn_enemy_pressed() -> void:
 	cfront.spawn_mob()
+	
+	
 
 func lose():
 	get_tree().change_scene_to_file("res://loser.tscn")
+
+
+func _on_timer_timeout() -> void: # every 5 seconds
+	var side = randi_range(1,100)
+	if (side <= 25): #front
+		cfront.spawn_mob()
+	elif (side <= 45): #back
+		cback.spawn_mob()
+	elif (side <= 68): #left
+		cleft.spawn_mob()
+	elif (side <= 91): #right
+		cright.spawn_mob()

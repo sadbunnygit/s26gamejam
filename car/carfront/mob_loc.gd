@@ -2,9 +2,9 @@ extends PathFollow2D
 
 # for monster spawning
 @export var mob_scene: PackedScene
-var speed = 1 # how fast it will travel
+var speed = 0.5 # how fast it will travel
 
-func spawn_mob(s : int = 1):
+func spawn_mob(s : float = speed):
 	print_debug("mob spawned")
 	speed = s
 	# Create a new instance of the Mob scene.
