@@ -34,3 +34,13 @@ metadata/_edit_group_ = true
 sprite_frames = SubResource("SpriteFrames_87jk0")
 frame_progress = 0.7270583
 metadata/_edit_group_ = true
+
+[node name="Control" type="Control" parent="." unique_id=130059220]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -150.0
+offset_top = -110.0
+offset_right = 150.0
+offset_bottom = 121.0
+
+[connection signal="gui_input" from="Control" to="." method="_on_control_gui_input"]
