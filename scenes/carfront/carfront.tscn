@@ -54,8 +54,6 @@ offset_bottom = 591.0
 text = "EJECT!"
 
 [node name="mobPath1" type="Path2D" parent="." unique_id=1943513510]
-position = Vector2(692, 283)
-scale = Vector2(0.56952775, 0.7943389)
 curve = SubResource("Curve2D_0yogx")
 
 [node name="mobLoc" type="PathFollow2D" parent="mobPath1" unique_id=1223515463]

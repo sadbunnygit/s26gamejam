@@ -17,7 +17,6 @@ func _on_look_front_pressed() -> void:
 
 # Keyboard / Mouse input
 func _input(event):
-	print(event.as_text())
 	if event.is_action_pressed("ui_up"):
 		print("ui_up occurred!")
 		_on_look_front_pressed()

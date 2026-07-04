@@ -20,5 +20,5 @@ func _on_control_gui_input(event: InputEvent) -> void:
 			print_debug("starting interaction options")
 			var irt = interact.instantiate()
 			add_child(irt)
-			irt.global_position = Vector2(0, 0) 
+			irt.global_position = self.global_position 
 	
