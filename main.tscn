@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://c5dkdcoerkbje" path="res://car/carback/carback.tscn" id="3_lquwl"]
 [ext_resource type="PackedScene" uid="uid://bx7thw5wkefxn" path="res://car/carleft/carleft.tscn" id="4_7mycd"]
 [ext_resource type="PackedScene" uid="uid://bsslfckg7pp6w" path="res://car/carright/carright.tscn" id="5_272bh"]
+[ext_resource type="Texture2D" uid="uid://brqcrm5xm325f" path="res://icon.svg" id="6_7mycd"]
 
 [node name="main" type="Node2D" unique_id=280540536]
 script = ExtResource("1_0xm2m")
@@ -12,3 +13,12 @@ carFront = ExtResource("1_ig7tw")
 carBack = ExtResource("3_lquwl")
 carLeft = ExtResource("4_7mycd")
 carRight = ExtResource("5_272bh")
+
+[node name="spawnEnemy" type="Button" parent="." unique_id=1953693257]
+offset_left = 733.0
+offset_top = 492.0
+offset_right = 869.0
+offset_bottom = 628.0
+icon = ExtResource("6_7mycd")
+
+[connection signal="pressed" from="spawnEnemy" to="." method="_on_spawn_enemy_pressed"]

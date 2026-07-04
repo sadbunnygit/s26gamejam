@@ -8,6 +8,7 @@ var cfront
 var cback
 var cleft
 var cright
+var passenger
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -51,7 +52,15 @@ func viewRight():
 	cleft.hide()
 	cfront.hide()
 
+func newPassenger(mob) -> void:
+	print_debug("new passenger: ", mob)
+	passenger = mob
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+
+
+func _on_spawn_enemy_pressed() -> void:
+	cfront.spawn_mob()

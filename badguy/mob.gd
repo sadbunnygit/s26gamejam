@@ -19,20 +19,33 @@ func _on_control_gui_input(event: InputEvent) -> void:
 			print_debug("I've been left clicked D:")
 			already_clicked = true
 			print_debug("starting interaction options")
-			var control = interact.instantiate()
-			add_child(control)
+			var i = interact.instantiate()
+			add_child(i)
 			print_debug("self.position: ", self.position.x, ", ", self.position.y)
 			print_debug("self.global_position: ", self.global_position.x, ", ", self.global_position.y)
-			control.position = Vector2(-100,0)
-			control.mob = self
+			i.position = Vector2(-100,0)
+			i.mob = self
+			i.name = "interact"
 	
 func leave() -> void:
 	print_debug("leaving")
 	already_clicked = false
 	$AnimatedSprite2D.stop()
-	if has_node("control"):
-		get_node("control").queue_free()
+	if has_node("interact"):
+		get_node("interact").queue_free()
+	if has_node("Control"):
+		get_node("Control").queue_free()
 	queue_free()
 
 func enterCar() -> void:
 	print_debug("entering car")
+	if has_node("interact"):
+		get_node("interact").queue_free()
+	if has_node("Control"):
+		get_node("Control").queue_free()
+	print(self)
+	get_tree().current_scene.print_tree_pretty()
+	var main = self.get_parent().get_parent().get_parent().get_parent()# should make it to main
+	reparent(main) 
+	get_tree().current_scene.print_tree_pretty()
+	main.newPassenger(self)
