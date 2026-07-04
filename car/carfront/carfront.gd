@@ -2,7 +2,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	print_debug("hi in front")
+	print_debug("NEW CAR FRONT LOADED")
 	spawn_mob()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -23,15 +23,15 @@ func spawn_mob():
 # Look around buttons 
 func _on_look_left_pressed() -> void:
 	print_debug("look left button pressed")
-	get_tree().change_scene_to_file("res://scenes/carleft/carleft.tscn")
+	WorldManager.load_world(WorldManager.cleft)
 
 func _on_look_right_pressed() -> void:
 	print_debug("look right button pressed")
-	get_tree().change_scene_to_file("res://scenes/carright/carright.tscn")
+	WorldManager.load_world(WorldManager.cright)
 	
 func _on_look_back_pressed() -> void:
 	print_debug("look back button pressed")
-	get_tree().change_scene_to_file("res://scenes/carback/carback.tscn")
+	WorldManager.load_world(WorldManager.cback)
 
 # other interaction
 func _on_eject_pressed() -> void:

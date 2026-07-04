@@ -3,7 +3,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	print_debug("hi in back")
+	print_debug("NEW CAR BACK LOADED")
 	pass # Replace with function body.
 
 
@@ -13,7 +13,7 @@ func _ready() -> void:
 
 func _on_look_front_pressed() -> void:
 	print_debug("look front button pressed")
-	get_tree().change_scene_to_file("res://scenes/carfront/carfront.tscn")
+	WorldManager.load_world(WorldManager.cfront)
 
 # Keyboard / Mouse input
 func _input(event):

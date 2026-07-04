@@ -1,7 +1,14 @@
 [gd_scene format=3 uid="uid://bfrsjv851nfrf"]
 
+[ext_resource type="Script" uid="uid://be65jx4etgr3r" path="res://main.gd" id="1_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://bxjoyxplckah6" path="res://car/carfront/carfront.tscn" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://c5dkdcoerkbje" path="res://car/carback/carback.tscn" id="3_lquwl"]
+[ext_resource type="PackedScene" uid="uid://bx7thw5wkefxn" path="res://car/carleft/carleft.tscn" id="4_7mycd"]
+[ext_resource type="PackedScene" uid="uid://bsslfckg7pp6w" path="res://car/carright/carright.tscn" id="5_272bh"]
 
 [node name="main" type="Node2D" unique_id=280540536]
-
-[node name="carfront" parent="." unique_id=1941058003 instance=ExtResource("1_ig7tw")]
+script = ExtResource("1_0xm2m")
+carFront = ExtResource("1_ig7tw")
+carBack = ExtResource("3_lquwl")
+carLeft = ExtResource("4_7mycd")
+carRight = ExtResource("5_272bh")

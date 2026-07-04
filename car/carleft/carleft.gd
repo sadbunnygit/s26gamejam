@@ -3,7 +3,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	print_debug("hi in left")
+	print_debug("NEW CAR LEFT LOADED")
 	spawn_mob()
 
 func spawn_mob():
@@ -22,7 +22,7 @@ func spawn_mob():
 
 func _on_look_front_pressed() -> void:
 	print_debug("look front button pressed")
-	get_tree().change_scene_to_file("res://scenes/carfront/carfront.tscn")
+	WorldManager.load_world(WorldManager.cfront)
 
 
 # Keyboard / Mouse input
