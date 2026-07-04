@@ -6,14 +6,14 @@ func _ready() -> void:
 	print_debug("NEW CAR RIGHT LOADED")
 	pass # Replace with function body.
 
-func spawn_mob(speed : float = 0.5):
+func spawn_mob(type : String, speed : float = 1):
 	var path = randi_range(1,2) 
 	if (path == 1):
 		print_debug("spawning mob from right path 1")
-		$mobPath1/mobLoc.spawn_mob(speed)
+		$mobPath1/mobLoc.spawn_mob(type, speed)
 	elif (path == 2):
 		print_debug("spawning mob from right path 2")
-		$mobPath2/mobLoc.spawn_mob(speed)
+		$mobPath2/mobLoc.spawn_mob(type, speed)
 
 func _on_look_front_pressed() -> void:
 	print_debug("look front button pressed")

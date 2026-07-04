@@ -8,9 +8,14 @@ var main
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	print_debug("badguy entered")
-	get_tree().current_scene.print_tree_pretty()
+	$monster.play()
+	#get_tree().current_scene.print_tree_pretty()
 	main = self.get_parent().get_parent().get_parent().get_parent()# should make it to main
-	$AnimatedSprite2D.animation = "default"
+	$AnimatedSprite2D.animation = type
+	if type == "human":
+		print_debug("human entered!")
+		#$AudioStreamPlayer2D.play()
+		$AnimatedSprite2D.animation = "human"
 	$AnimatedSprite2D.play()
 	$Timer.start()
 	

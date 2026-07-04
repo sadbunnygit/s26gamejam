@@ -9,7 +9,7 @@ var cback
 var cleft
 var cright
 var passenger
-var canSpawnHuman = 0
+var gamePhase = 0
 var hasHuman
 
 # Called when the node enters the scene tree for the first time.
@@ -63,33 +63,50 @@ func newPassenger(mob) -> void:
 
 func eject() -> void:
 	print_debug("ejecting", passenger)
-	if passenger != null:
-		passenger.queue_free()
+	if passenger == null:
+		return
+	passenger.queue_free()
 	passenger = null
-
-
-func _on_spawn_enemy_pressed() -> void:
-	cfront.spawn_mob()
+	hasHuman = false
+	cfront.get_node("eject/spring").play()
+	await get_tree().create_timer(1.5).timeout
+	cfront.get_node("eject/explode").play()
 	
 	
+
 
 func lose():
 	get_tree().change_scene_to_file("res://loser.tscn")
+func win():
+	get_tree().change_scene_to_file("res://winner.tscn")
 
 
 func _on_spawntimer_timeout() -> void:  # 8 seconds rn
+	var type = "monster_" + str(gamePhase)
 	var side = randi_range(0,99)
 	var speed = randf_range(2,5)
-	var spawnHuman = randi_range(0,1) # 1/2 chance for human spawn when available
-	if (side <= 99): #front
-		cfront.spawn_mob(speed, 0)
+	var spawnHuman = randi_range(0,3) if gamePhase > 2 else 0  # 1/4 chance for human spawn when available
+	if spawnHuman == 3:
+		speed = 0.5
+		type = "human"
+	print_debug("spawning: ", type)
+	if (side <= 25): #front
+		cfront.spawn_mob(type, speed)
 	elif (side <= 45): #back
-		cback.spawn_mob(speed)
+		cback.spawn_mob(type, speed)
 	elif (side <= 68): #left
-		cleft.spawn_mob(speed)
+		cleft.spawn_mob(type, speed)
 	elif (side <= 91): #right
-		cright.spawn_mob(speed)
+		cright.spawn_mob(type, speed)
 
 
-func _on_gametimer_timeout() -> void: # 3 minutes rn
-	canSpawnHuman = 1
+func _on_gametimer_timeout() -> void: # 30 secs
+	gamePhase += 1
+	print_debug("gamePhase:",gamePhase)
+	if gamePhase >= 4: # end game phase
+		$gameTimer.stop()
+		$spawnTimer.stop()
+		if hasHuman:
+			win()
+		else:
+			lose()

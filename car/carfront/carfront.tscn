@@ -4,6 +4,8 @@
 [ext_resource type="Script" uid="uid://j1o8f51nm2kt" path="res://car/carfront/carfront.gd" id="1_fcdvi"]
 [ext_resource type="PackedScene" uid="uid://c750l2865gfdp" path="res://badguy/mob.tscn" id="2_gkhf7"]
 [ext_resource type="Script" uid="uid://5fttvvn3n5pe" path="res://car/carfront/mob_loc.gd" id="3_gkhf7"]
+[ext_resource type="AudioStream" uid="uid://0f7c8vul4uhr" path="res://assets/audio/universfield-spring-boing-229170.mp3" id="3_m0eta"]
+[ext_resource type="AudioStream" uid="uid://c5g5wmns1nud3" path="res://assets/audio/u_b32baquv5u-explosion-9-340460.mp3" id="4_l404k"]
 
 [sub_resource type="Curve2D" id="Curve2D_0yogx"]
 _data = {
@@ -56,6 +58,12 @@ offset_right = 708.0
 offset_bottom = 591.0
 text = "EJECT!"
 metadata/_edit_use_anchors_ = true
+
+[node name="spring" type="AudioStreamPlayer2D" parent="eject" unique_id=1248097904]
+stream = ExtResource("3_m0eta")
+
+[node name="explode" type="AudioStreamPlayer2D" parent="eject" unique_id=1568363984]
+stream = ExtResource("4_l404k")
 
 [node name="mobPath1" type="Path2D" parent="." unique_id=1943513510]
 curve = SubResource("Curve2D_0yogx")

@@ -5,14 +5,14 @@ extends Node2D
 func _ready() -> void:
 	print_debug("NEW CAR LEFT LOADED")
 
-func spawn_mob(speed : float = 0.5):
+func spawn_mob(type : String, speed : float = 1):
 	var path = randi_range(1,2) 
 	if (path == 1):
 		print_debug("spawning mob from left path 1")
-		$mobPath1/mobLoc.spawn_mob(speed)
+		$mobPath1/mobLoc.spawn_mob(type, speed)
 	elif (path == 2):
 		print_debug("spawning mob from left path 2")
-		$mobPath2/mobLoc.spawn_mob(speed)
+		$mobPath2/mobLoc.spawn_mob(type, speed)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

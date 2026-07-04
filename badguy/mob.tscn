@@ -2,29 +2,59 @@
 
 [ext_resource type="Script" uid="uid://c0qdmh26ff1s8" path="res://badguy/mob.gd" id="1_3mflk"]
 [ext_resource type="PackedScene" uid="uid://c3kparcjfyubo" path="res://badguy/interact.tscn" id="2_plv4x"]
-[ext_resource type="Texture2D" uid="uid://ddri5b1yxibli" path="res://assets/aMask.png" id="2_y5sel"]
-[ext_resource type="Texture2D" uid="uid://bw4dcbisdple2" path="res://assets/kMask.png" id="3_plv4x"]
-[ext_resource type="Texture2D" uid="uid://cjpu3n481yul0" path="res://assets/mMask.png" id="4_fgj1c"]
-[ext_resource type="Texture2D" uid="uid://dhmitr2wiuww5" path="res://assets/sMask.png" id="5_qwcij"]
+[ext_resource type="Texture2D" uid="uid://bnushej7d6tg1" path="res://assets/zero.jpg" id="4_fgj1c"]
+[ext_resource type="Texture2D" uid="uid://dpwtrknqsexdj" path="res://assets/one.png" id="5_qwcij"]
+[ext_resource type="Texture2D" uid="uid://kdgwa5op7plv" path="res://assets/two.webp" id="6_ygbpr"]
+[ext_resource type="Texture2D" uid="uid://dj2pxpgwbpd7j" path="res://assets/3.jpg" id="7_bcn8y"]
+[ext_resource type="Texture2D" uid="uid://brqcrm5xm325f" path="res://icon.svg" id="7_plv4x"]
+[ext_resource type="AudioStream" uid="uid://06qykhoby8di" path="res://assets/audio/dragon-studio-spooky-scary-sound-410563.mp3" id="8_fgj1c"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_87jk0"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_y5sel")
+"texture": ExtResource("7_plv4x")
+}],
+"loop": 1,
+"name": &"human",
+"speed": 5.0
 }, {
-"duration": 1.0,
-"texture": ExtResource("3_plv4x")
-}, {
+"frames": [{
 "duration": 1.0,
 "texture": ExtResource("4_fgj1c")
+}],
+"loop": 1,
+"name": &"monster_0",
+"speed": 5.0
 }, {
+"frames": [{
 "duration": 1.0,
 "texture": ExtResource("5_qwcij")
 }],
 "loop": 1,
-"name": &"default",
+"name": &"monster_1",
 "speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_ygbpr")
+}],
+"loop": 1,
+"name": &"monster_2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_bcn8y")
+}],
+"loop": 1,
+"name": &"monster_3",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": 1,
+"name": &"new_animation",
+"speed": 5.0
 }]
 
 [node name="Mob" type="Node2D" unique_id=1486219742]
@@ -34,8 +64,11 @@ metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1480124001]
 sprite_frames = SubResource("SpriteFrames_87jk0")
-frame_progress = 0.7270583
+animation = &"monster_3"
 metadata/_edit_group_ = true
+
+[node name="monster" type="AudioStreamPlayer2D" parent="." unique_id=979830762]
+stream = ExtResource("8_fgj1c")
 
 [node name="Control" type="Control" parent="." unique_id=130059220]
 layout_mode = 3
