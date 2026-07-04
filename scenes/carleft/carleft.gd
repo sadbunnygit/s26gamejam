@@ -4,7 +4,16 @@ extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	print_debug("hi in left")
-	pass # Replace with function body.
+	spawn_mob()
+
+func spawn_mob():
+	var path = randi_range(1,2) 
+	if (path == 1):
+		print_debug("spawning mob from left path 1")
+		$mobPath1/mobLoc.spawn_mob()
+	elif (path == 2):
+		print_debug("spawning mob from left path 2")
+		$mobPath2/mobLoc.spawn_mob()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

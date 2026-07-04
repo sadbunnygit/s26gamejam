@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://c3kparcjfyubo"]
+
+[ext_resource type="Script" uid="uid://bqrhyssfn6d4k" path="res://badguy/interact.gd" id="1_f3d4a"]
+
+[node name="Control" type="Control" unique_id=66417146]
+layout_mode = 3
+anchor_right = 0.17500001
+anchor_bottom = 0.17600001
+offset_right = -0.030181885
+offset_bottom = -0.04801178
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_f3d4a")
+
+[node name="getaway" type="Button" parent="." unique_id=420371074]
+layout_mode = 0
+offset_right = 108.0
+offset_bottom = 51.0
+text = "\"Get Away!\""
+
+[node name="letin" type="Button" parent="." unique_id=118504474]
+layout_mode = 0
+offset_top = 52.0
+offset_right = 108.0
+offset_bottom = 103.0
+text = "Let in"

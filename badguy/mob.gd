@@ -1,5 +1,6 @@
 extends Node2D
 
+@export var interact: PackedScene
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -15,5 +16,8 @@ func _process(delta: float) -> void:
 func _on_control_gui_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-			print("I've been left clicked D:")
+			print_debug("I've been left clicked D:")
+			print_debug("starting interaction options")
+			var irt = interact.instantiate()
+			add_child(irt)
 	

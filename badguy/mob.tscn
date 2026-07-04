@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c750l2865gfdp"]
 
 [ext_resource type="Script" uid="uid://c0qdmh26ff1s8" path="res://badguy/mob.gd" id="1_3mflk"]
+[ext_resource type="PackedScene" uid="uid://c3kparcjfyubo" path="res://badguy/interact.tscn" id="2_plv4x"]
 [ext_resource type="Texture2D" uid="uid://ddri5b1yxibli" path="res://assets/aMask.png" id="2_y5sel"]
 [ext_resource type="Texture2D" uid="uid://bw4dcbisdple2" path="res://assets/kMask.png" id="3_plv4x"]
 [ext_resource type="Texture2D" uid="uid://cjpu3n481yul0" path="res://assets/mMask.png" id="4_fgj1c"]
@@ -28,6 +29,7 @@ animations = [{
 
 [node name="Mob" type="Node2D" unique_id=1486219742]
 script = ExtResource("1_3mflk")
+interact = ExtResource("2_plv4x")
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1480124001]
