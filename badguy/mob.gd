@@ -52,7 +52,7 @@ func enterCar() -> void:
 	print_debug("trying to entering car")
 	if (main.passenger != null):
 		return # dont work!
-	#$Timer.stop()
+	$Timer.start() #reset
 	if has_node("interact"):
 		get_node("interact").queue_free()
 	if has_node("Control"):
@@ -62,7 +62,3 @@ func enterCar() -> void:
 	reparent(main) 
 	#get_tree().current_scene.print_tree_pretty()
 	main.newPassenger(self)
-
-
-
-	

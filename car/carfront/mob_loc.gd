@@ -4,7 +4,7 @@ extends PathFollow2D
 @export var mob_scene: PackedScene
 var speed = 0.5 # how fast it will travel
 
-func spawn_mob(s : float = speed):
+func spawn_mob(s : float = speed, human : bool = 0):
 	print_debug("mob spawned")
 	speed = s
 	# Create a new instance of the Mob scene.
@@ -12,6 +12,8 @@ func spawn_mob(s : float = speed):
 	progress_ratio = 0 # start at the beginning of the path
 	# Spawn the mob by adding it to the Main scene.
 	add_child(mob)
+	if (human):
+		mob.type = "human"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

@@ -9,6 +9,7 @@ var cback
 var cleft
 var cright
 var passenger
+var canSpawnHuman = 0
 var hasHuman
 
 # Called when the node enters the scene tree for the first time.
@@ -58,6 +59,7 @@ func newPassenger(mob) -> void:
 	passenger = mob
 	passenger.global_position = $pchair.position
 	hasHuman = (passenger.type == "human")
+	print_debug("human? ", hasHuman)
 
 func eject() -> void:
 	print_debug("ejecting", passenger)
@@ -75,13 +77,19 @@ func lose():
 	get_tree().change_scene_to_file("res://loser.tscn")
 
 
-func _on_timer_timeout() -> void: # every 5 seconds
-	var side = randi_range(1,100)
-	if (side <= 25): #front
-		cfront.spawn_mob()
+func _on_spawntimer_timeout() -> void:  # 8 seconds rn
+	var side = randi_range(0,99)
+	var speed = randf_range(2,5)
+	var spawnHuman = randi_range(0,1) # 1/2 chance for human spawn when available
+	if (side <= 99): #front
+		cfront.spawn_mob(speed, 0)
 	elif (side <= 45): #back
-		cback.spawn_mob()
+		cback.spawn_mob(speed)
 	elif (side <= 68): #left
-		cleft.spawn_mob()
+		cleft.spawn_mob(speed)
 	elif (side <= 91): #right
-		cright.spawn_mob()
+		cright.spawn_mob(speed)
+
+
+func _on_gametimer_timeout() -> void: # 3 minutes rn
+	canSpawnHuman = 1

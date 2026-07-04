@@ -10,14 +10,14 @@ func _ready() -> void:
 #	pass
 
 
-func spawn_mob(speed : float = 0.5):
+func spawn_mob(speed : float = 0.5, human : bool = 0):
 	var path = randi_range(1,2) 
 	if (path == 1):
 		print_debug("spawning mob from front path 1")
-		$mobPath1/mobLoc.spawn_mob(speed)
+		$mobPath1/mobLoc.spawn_mob(speed, human)
 	elif (path == 2):
 		print_debug("spawning mob from front path 2")
-		$mobPath2/mobLoc.spawn_mob(speed)
+		$mobPath2/mobLoc.spawn_mob(speed, human)
 		
 
 # Look around buttons 
