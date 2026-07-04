@@ -36,6 +36,7 @@ layout_mode = 0
 offset_top = 71.0
 offset_right = 256.0
 offset_bottom = 135.0
+text = "option 1"
 
 [node name="option2" type="Button" parent="box" unique_id=829849309]
 layout_mode = 0
@@ -43,6 +44,7 @@ offset_left = 256.0
 offset_top = 71.0
 offset_right = 512.0
 offset_bottom = 135.0
+text = "option 2"
 
 [connection signal="pressed" from="box/option1" to="." method="_on_option_1"]
 [connection signal="pressed" from="box/option2" to="." method="_on_option_2"]

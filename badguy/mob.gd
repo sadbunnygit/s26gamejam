@@ -68,6 +68,8 @@ func enterCar() -> void:
 	#get_tree().current_scene.print_tree_pretty()
 	main.newPassenger(self)
 	var dialog = dialogue.instantiate()
+	# set up different dialogs based on monster type
+	dialog.dialogPath = "res://badguy/dialogs/sample.json"
 	add_child(dialog)
 	$Timer.start(-20) #reset
 	dialog.global_position = Vector2(0,0)

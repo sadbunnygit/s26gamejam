@@ -408,11 +408,6 @@ point_count = 9
 [node name="carfront" type="Node2D" unique_id=1941058003]
 script = ExtResource("1_fcdvi")
 
-[node name="CarfrontPlaceholDr" type="Sprite2D" parent="." unique_id=981950786]
-position = Vector2(579, 450.74997)
-scale = Vector2(1.7808642, 2.3906662)
-texture = ExtResource("1_3lwtp")
-
 [node name="trees" type="AnimatedSprite2D" parent="." unique_id=1442982864]
 position = Vector2(569, 336)
 scale = Vector2(0.6400012, 0.6400012)
@@ -428,6 +423,11 @@ position = Vector2(569, 336)
 scale = Vector2(0.6400012, 0.6400012)
 sprite_frames = SubResource("SpriteFrames_nekx0")
 animation = &"both"
+
+[node name="CarfrontPlaceholDr" type="Sprite2D" parent="." unique_id=981950786]
+position = Vector2(579, 450.74997)
+scale = Vector2(1.7808642, 2.3906662)
+texture = ExtResource("1_3lwtp")
 
 [node name="lookLeft" type="Button" parent="." unique_id=759517212]
 offset_top = 2.0
