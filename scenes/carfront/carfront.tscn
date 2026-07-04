@@ -7,9 +7,9 @@
 
 [sub_resource type="Curve2D" id="Curve2D_0yogx"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 677.7545, -270.66534, 0, 0, 0, 0, 261.62024, -221.5679, 0, 0, 0, 0, 147.4906, -140.99776, 0, 0, 0, 0, 80.76868, -49.097443, 0, 0, 0, 0, -17.558472, 15.106903)
+"points": PackedVector2Array(0, 0, 0, 0, 1058, 70, 0, 0, 0, 0, 913, 94, 0, 0, 0, 0, 823, 135, 0, 0, 0, 0, 779, 183, 0, 0, 0, 0, 779, 225, 0, 0, 0, 0, 783, 266, 0, 0, 0, 0, 754, 301, 0, 0, 0, 0, 717, 331, 0, 0, 0, 0, 626, 353)
 }
-point_count = 5
+point_count = 9
 
 [sub_resource type="Curve2D" id="Curve2D_yn5v8"]
 _data = {
@@ -57,7 +57,7 @@ text = "EJECT!"
 curve = SubResource("Curve2D_0yogx")
 
 [node name="mobLoc" type="PathFollow2D" parent="mobPath1" unique_id=1223515463]
-position = Vector2(677.7545, -270.66534)
+position = Vector2(1058, 70)
 rotates = false
 loop = false
 script = ExtResource("3_gkhf7")

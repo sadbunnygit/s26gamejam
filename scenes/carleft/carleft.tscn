@@ -27,11 +27,11 @@ offset_bottom = 667.0
 text = "Turn Right (Back to front)"
 
 [node name="mobPath1" type="Path2D" parent="." unique_id=2087048534]
-position = Vector2(692, 283)
-scale = Vector2(0.56952775, 0.7943389)
+position = Vector2(425, 311)
 curve = SubResource("Curve2D_hnajx")
 
 [node name="mobLoc" type="PathFollow2D" parent="mobPath1" unique_id=1443862268]
+position = Vector2(677.7545, -270.66534)
 rotates = false
 loop = false
 script = ExtResource("2_y3lde")
@@ -41,6 +41,7 @@ mob_scene = ExtResource("3_cimb5")
 curve = SubResource("Curve2D_77xqt")
 
 [node name="mobLoc" type="PathFollow2D" parent="mobPath2" unique_id=471180959]
+position = Vector2(93, 70)
 rotates = false
 loop = false
 script = ExtResource("2_y3lde")
