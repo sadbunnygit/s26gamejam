@@ -1,34 +1,13 @@
 extends Node2D
 
-# for monster spawning
-@export var mob_scene: PackedScene
-
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	print_debug("hi in front")
-	_on_mob_timer_timeout()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta: float) -> void:	
 #	pass
-
-func _on_mob_timer_timeout():
-	# Create a new instance of the Mob scene.
-	var mob = mob_scene.instantiate()
-
-	# start
-	var mobLoc = $mobPath/mobLoc
-	mobLoc.progress_ratio = 1
-
-	# Spawn the mob by adding it to the Main scene.
-	add_child(mob)
-
-
-
-
-
 
 
 
