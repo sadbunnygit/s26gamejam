@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://c750l2865gfdp"]
+
+[ext_resource type="Script" uid="uid://c0qdmh26ff1s8" path="res://badguy/mob.gd" id="1_3mflk"]
+[ext_resource type="Texture2D" uid="uid://ddri5b1yxibli" path="res://assets/aMask.png" id="2_y5sel"]
+[ext_resource type="Texture2D" uid="uid://bw4dcbisdple2" path="res://assets/kMask.png" id="3_plv4x"]
+[ext_resource type="Texture2D" uid="uid://cjpu3n481yul0" path="res://assets/mMask.png" id="4_fgj1c"]
+[ext_resource type="Texture2D" uid="uid://dhmitr2wiuww5" path="res://assets/sMask.png" id="5_qwcij"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_87jk0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_y5sel")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_plv4x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_fgj1c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_qwcij")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 2.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_87jk0"]
+radius = 165.68042
+
+[node name="Mob" type="RigidBody2D" unique_id=66720167]
+script = ExtResource("1_3mflk")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1480124001]
+sprite_frames = SubResource("SpriteFrames_87jk0")
+frame_progress = 0.7270583
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=485761402]
+shape = SubResource("CircleShape2D_87jk0")
+metadata/_edit_group_ = true

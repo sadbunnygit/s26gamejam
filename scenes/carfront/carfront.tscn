@@ -2,13 +2,21 @@
 
 [ext_resource type="Texture2D" uid="uid://8upt5ngubh8k" path="res://scenes/carfront/carfrontPLACEHOLDER.png" id="1_3lwtp"]
 [ext_resource type="Script" uid="uid://j1o8f51nm2kt" path="res://scenes/carfront/carfront.gd" id="1_fcdvi"]
+[ext_resource type="PackedScene" uid="uid://c750l2865gfdp" path="res://badguy/mob.tscn" id="2_gkhf7"]
+
+[sub_resource type="Curve2D" id="Curve2D_0yogx"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 677.7545, -270.66534, 0, 0, 0, 0, 261.62024, -221.5679, 0, 0, 0, 0, 147.4906, -140.99776, 0, 0, 0, 0, 80.76868, -49.097443, 0, 0, 0, 0, -17.558472, 15.106903)
+}
+point_count = 5
 
 [node name="carfront" type="Node2D" unique_id=1941058003]
 script = ExtResource("1_fcdvi")
+mob_scene = ExtResource("2_gkhf7")
 
 [node name="CarfrontPlaceholDr" type="Sprite2D" parent="." unique_id=981950786]
-position = Vector2(579, 422.75)
-scale = Vector2(1.7808642, 2.2413332)
+position = Vector2(579, 450.74997)
+scale = Vector2(1.7808642, 2.3906662)
 texture = ExtResource("1_3lwtp")
 
 [node name="lookLeft" type="Button" parent="." unique_id=759517212]
@@ -32,6 +40,23 @@ offset_bottom = 670.0
 text = "Turn Right
 "
 
+[node name="eject" type="Button" parent="." unique_id=1550892661]
+offset_left = 385.0
+offset_top = 481.0
+offset_right = 708.0
+offset_bottom = 591.0
+text = "EJECT!"
+
+[node name="mobPath" type="Path2D" parent="." unique_id=1943513510]
+position = Vector2(692, 283)
+scale = Vector2(0.56952775, 0.7943389)
+curve = SubResource("Curve2D_0yogx")
+
+[node name="mobSpawnLoc" type="PathFollow2D" parent="mobPath" unique_id=1223515463]
+position = Vector2(677.7545, -270.66534)
+rotation = 3.024151
+
 [connection signal="pressed" from="lookLeft" to="." method="_on_look_left_pressed"]
 [connection signal="pressed" from="lookBack" to="." method="_on_look_back_pressed"]
 [connection signal="pressed" from="lookRight" to="." method="_on_look_right_pressed"]
+[connection signal="pressed" from="eject" to="." method="_on_eject_pressed"]
