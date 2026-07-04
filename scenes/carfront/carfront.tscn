@@ -69,6 +69,7 @@ mob_scene = ExtResource("2_gkhf7")
 curve = SubResource("Curve2D_yn5v8")
 
 [node name="mobLoc" type="PathFollow2D" parent="mobPath2" unique_id=443531142]
+position = Vector2(93, 70)
 rotates = false
 loop = false
 script = ExtResource("3_gkhf7")
