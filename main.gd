@@ -11,10 +11,12 @@ var cright
 var passenger
 var gamePhase = 0
 var hasHuman
+var humanSpawned = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	print_debug("main entered, _ready")
+	
 	cfront = carFront.instantiate()
 	add_child(cfront)
 	cback = carBack.instantiate()
@@ -86,9 +88,10 @@ func _on_spawntimer_timeout() -> void:  # 8 seconds rn
 	var side = randi_range(0,99)
 	var speed = randf_range(2,5)
 	var spawnHuman = randi_range(0,3) if gamePhase > 2 else 0  # 1/4 chance for human spawn when available
-	if spawnHuman == 3:
+	if spawnHuman == 3 && side <= 91:
 		speed = 0.5
 		type = "human"
+		humanSpawned = true
 	print_debug("spawning: ", type)
 	if (side <= 25): #front
 		cfront.spawn_mob(type, speed)
@@ -104,9 +107,12 @@ func _on_gametimer_timeout() -> void: # 30 secs
 	gamePhase += 1
 	print_debug("gamePhase:",gamePhase)
 	if gamePhase >= 4: # end game phase
-		$gameTimer.stop()
-		$spawnTimer.stop()
-		if hasHuman:
-			win()
+		if humanSpawned:
+			$gameTimer.stop()
+			$spawnTimer.stop()
+			if hasHuman:
+				win()
+			else:
+				lose()
 		else:
-			lose()
+			gamePhase = 3
