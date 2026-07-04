@@ -19,9 +19,20 @@ func _on_control_gui_input(event: InputEvent) -> void:
 			print_debug("I've been left clicked D:")
 			already_clicked = true
 			print_debug("starting interaction options")
-			var irt = interact.instantiate()
-			add_child(irt)
+			var control = interact.instantiate()
+			add_child(control)
 			print_debug("self.position: ", self.position.x, ", ", self.position.y)
 			print_debug("self.global_position: ", self.global_position.x, ", ", self.global_position.y)
-			irt.position = Vector2(-100,0)
+			control.position = Vector2(-100,0)
+			control.mob = self
 	
+func leave() -> void:
+	print_debug("leaving")
+	already_clicked = false
+	$AnimatedSprite2D.stop()
+	if has_node("control"):
+		get_node("control").queue_free()
+	queue_free()
+
+func enterCar() -> void:
+	print_debug("entering car")

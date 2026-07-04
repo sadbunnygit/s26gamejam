@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c5dkdcoerkbje"]
 
-[ext_resource type="Script" uid="uid://dif8gmwc54wks" path="res://scenes/carback/carback.gd" id="1_iuw5m"]
+[ext_resource type="Script" uid="uid://dif8gmwc54wks" path="res://car/carback/carback.gd" id="1_iuw5m"]
 
 [node name="carback" type="Node2D" unique_id=115809439]
 script = ExtResource("1_iuw5m")

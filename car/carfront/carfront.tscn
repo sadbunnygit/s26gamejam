@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://bxjoyxplckah6"]
 
-[ext_resource type="Texture2D" uid="uid://8upt5ngubh8k" path="res://scenes/carfront/carfrontPLACEHOLDER.png" id="1_3lwtp"]
-[ext_resource type="Script" uid="uid://j1o8f51nm2kt" path="res://scenes/carfront/carfront.gd" id="1_fcdvi"]
+[ext_resource type="Texture2D" uid="uid://8upt5ngubh8k" path="res://car/carfront/carfrontPLACEHOLDER.png" id="1_3lwtp"]
+[ext_resource type="Script" uid="uid://j1o8f51nm2kt" path="res://car/carfront/carfront.gd" id="1_fcdvi"]
 [ext_resource type="PackedScene" uid="uid://c750l2865gfdp" path="res://badguy/mob.tscn" id="2_gkhf7"]
-[ext_resource type="Script" uid="uid://5fttvvn3n5pe" path="res://scenes/carfront/mob_loc.gd" id="3_gkhf7"]
+[ext_resource type="Script" uid="uid://5fttvvn3n5pe" path="res://car/carfront/mob_loc.gd" id="3_gkhf7"]
 
 [sub_resource type="Curve2D" id="Curve2D_0yogx"]
 _data = {
@@ -30,6 +30,7 @@ offset_top = 2.0
 offset_right = 146.0
 offset_bottom = 671.0
 text = "Turn Left"
+metadata/_edit_use_anchors_ = true
 
 [node name="lookBack" type="Button" parent="." unique_id=1751213197]
 offset_left = 350.0
@@ -37,6 +38,7 @@ offset_top = 3.0
 offset_right = 798.0
 offset_bottom = 136.0
 text = "Look Back"
+metadata/_edit_use_anchors_ = true
 
 [node name="lookRight" type="Button" parent="." unique_id=296844915]
 offset_left = 1001.0
@@ -45,6 +47,7 @@ offset_right = 1150.0
 offset_bottom = 670.0
 text = "Turn Right
 "
+metadata/_edit_use_anchors_ = true
 
 [node name="eject" type="Button" parent="." unique_id=1550892661]
 offset_left = 385.0
@@ -52,6 +55,7 @@ offset_top = 481.0
 offset_right = 708.0
 offset_bottom = 591.0
 text = "EJECT!"
+metadata/_edit_use_anchors_ = true
 
 [node name="mobPath1" type="Path2D" parent="." unique_id=1943513510]
 curve = SubResource("Curve2D_0yogx")

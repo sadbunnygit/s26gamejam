@@ -37,3 +37,6 @@ offset_right = 103.0
 offset_bottom = 115.0
 text = "Let in"
 icon = SubResource("PlaceholderTexture2D_vb2co")
+
+[connection signal="pressed" from="getaway" to="." method="_on_getaway_pressed"]
+[connection signal="pressed" from="letin" to="." method="_on_letin_pressed"]

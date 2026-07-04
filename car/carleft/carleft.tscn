@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bx7thw5wkefxn"]
 
-[ext_resource type="Script" uid="uid://b4aubxout8twf" path="res://scenes/carleft/carleft.gd" id="1_tfxng"]
-[ext_resource type="Script" uid="uid://5fttvvn3n5pe" path="res://scenes/carfront/mob_loc.gd" id="2_y3lde"]
+[ext_resource type="Script" uid="uid://b4aubxout8twf" path="res://car/carleft/carleft.gd" id="1_tfxng"]
+[ext_resource type="Script" uid="uid://5fttvvn3n5pe" path="res://car/carfront/mob_loc.gd" id="2_y3lde"]
 [ext_resource type="PackedScene" uid="uid://c750l2865gfdp" path="res://badguy/mob.tscn" id="3_cimb5"]
 
 [sub_resource type="Curve2D" id="Curve2D_hnajx"]
