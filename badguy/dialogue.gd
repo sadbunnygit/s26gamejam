@@ -25,10 +25,6 @@ func _on_option_1() -> void:
 		mob.enterCar()
 		queue_free()
 		return
-	if timeline[current_node]["options"][0]["next"] == "kill":
-		mob._on_timer_timeout()
-		queue_free()
-		return
 	show_node(timeline[current_node]["options"][0]["next"])
 
 func _on_option_2() -> void:
@@ -38,10 +34,6 @@ func _on_option_2() -> void:
 		return
 	if timeline[current_node]["options"][1]["next"] == "letin":
 		mob.enterCar()
-		queue_free()
-		return
-	if timeline[current_node]["options"][1]["next"] == "kill":
-		mob._on_timer_timeout()
 		queue_free()
 		return
 	show_node(timeline[current_node]["options"][1]["next"])
@@ -54,6 +46,7 @@ func show_node(id):
 	$box/option2.hide()
 	if node["options"].size() <= 0:
 		await get_tree().create_timer(2).timeout
+		mob.restartTime()
 		queue_free()
 	if node["options"].size() > 0:
 		$box/option1.text = node["options"][0]["text"]

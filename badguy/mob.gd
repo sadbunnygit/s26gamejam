@@ -36,6 +36,10 @@ func _on_timer_timeout() -> void:
 	print_debug("monster kills")
 	main.lose()
 
+func restartTime() -> void:
+	$Timer.start(0)
+
+
 var already_clicked = false
 func _on_control_gui_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
@@ -59,9 +63,11 @@ func _on_control_gui_input(event: InputEvent) -> void:
 			add_child(i)
 			print_debug("self.position: ", self.position.x, ", ", self.position.y)
 			print_debug("self.global_position: ", self.global_position.x, ", ", self.global_position.y)
-			i.position = Vector2(-100,-25)
+			i.global_position = Vector2(0,0)
 			i.mob = self
 			i.name = "interact"
+			if (main.passenger != null):
+				i.get_node("letin").hide()
 	
 func leave() -> void:
 	print_debug("leaving")
