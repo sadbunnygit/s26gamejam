@@ -1,5 +1,19 @@
 {
+
+	
 	"start": 
+    {
+        "text": "",
+        "options": 
+        [
+            {
+                "text": "So… Why were you in the woods?",
+                "next": "hi"
+            }
+        ]
+    },
+
+	"hi": 
 	{
 		"text": "I was doing what every human would do in the woods.",
 		"options": 

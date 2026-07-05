@@ -1,5 +1,18 @@
 {
+
     "start": 
+    {
+        "text": "",
+        "options": 
+        [
+            {
+                "text": "So… Why were you in the woods?",
+                "next": "hi"
+            }
+        ]
+    },
+
+    "hi": 
     {
         "text": "Lost track of the time.",
         "options": 

@@ -1,5 +1,18 @@
 {
-    "start":
+
+    "start": 
+    {
+        "text": "",
+        "options": 
+        [
+            {
+                "text": "So… Why were you in the woods?",
+                "next": "hi"
+            }
+        ]
+    },
+    
+    "hi":
     {
         "text": "I got lost on the trail and before I knew it, the sun was down.\n Eventually, I managed to find a road and just hoped that I'd find another person before… Well before something else got to me.",
         "options": 
