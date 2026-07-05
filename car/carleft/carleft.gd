@@ -4,16 +4,14 @@ extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	print_debug("NEW CAR LEFT LOADED")
+	$trees.animation = "default"
+	$trees.play()
 
 func spawn_mob(type : String, speed : float = 1):
-	var path = randi_range(1,2) 
-	if (path == 1):
-		print_debug("spawning mob from left path 1")
-		$mobPath1/mobLoc.spawn_mob(type, speed)
-	elif (path == 2):
-		print_debug("spawning mob from left path 2")
-		$mobPath2/mobLoc.spawn_mob(type, speed)
-
+	var path = randi_range(1, 6)
+	print_debug("Spawning mob from left path %d" % path)
+	get_node("mobPath%d/mobLoc" % path).spawn_mob(type, speed)		
+		
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta: float) -> void:	

@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://bxjoyxplckah6"]
 
-[ext_resource type="Texture2D" uid="uid://8upt5ngubh8k" path="res://car/carfront/carfrontPLACEHOLDER.png" id="1_3lwtp"]
 [ext_resource type="Script" uid="uid://j1o8f51nm2kt" path="res://car/carfront/carfront.gd" id="1_fcdvi"]
 [ext_resource type="PackedScene" uid="uid://c750l2865gfdp" path="res://badguy/mob.tscn" id="2_gkhf7"]
 [ext_resource type="Script" uid="uid://5fttvvn3n5pe" path="res://car/carfront/mob_loc.gd" id="3_gkhf7"]
@@ -10,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://bm5rkevvyqhe6" path="res://assets/animations/frontseat/trees/trees_0003.png" id="6_5seur"]
 [ext_resource type="Texture2D" uid="uid://dqj6ascla5tx3" path="res://assets/animations/frontseat/trees/trees_0004.png" id="7_tjke4"]
 [ext_resource type="Texture2D" uid="uid://dy1avexv1aile" path="res://assets/animations/frontseat/trees/trees_0005.png" id="8_hxl01"]
+[ext_resource type="Texture2D" uid="uid://b3exo3fumhon6" path="res://assets/images/Get Away car front bg.png" id="8_lorjv"]
 [ext_resource type="Texture2D" uid="uid://cuvuljq521f64" path="res://assets/animations/frontseat/krobus keychain/krobus keychain_0000.png" id="9_ifog0"]
 [ext_resource type="Texture2D" uid="uid://c1qrdwgh2ldev" path="res://assets/animations/frontseat/krobus keychain/krobus keychain_0001.png" id="10_k2wxn"]
 [ext_resource type="Texture2D" uid="uid://4hxhfqoy2w2p" path="res://assets/animations/frontseat/krobus keychain/krobus keychain_0002.png" id="11_6pj10"]
@@ -132,6 +132,42 @@ animations = [{
 "name": &"default",
 "speed": 8.0
 }]
+
+[sub_resource type="Curve2D" id="Curve2D_0yogx"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1058, 70, 0, 0, 0, 0, 913, 94, 0, 0, 0, 0, 823, 135, 0, 0, 0, 0, 779, 183, 0, 0, 0, 0, 779, 225, 0, 0, 0, 0, 783, 266, 0, 0, 0, 0, 754, 301, 0, 0, 0, 0, 717, 331, 0, 0, 0, 0, 626, 353)
+}
+point_count = 9
+
+[sub_resource type="Curve2D" id="Curve2D_yn5v8"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 93, 70, 0, 0, 0, 0, 157, 81, 0, 0, 0, 0, 196, 155, 0, 0, 0, 0, 274, 164, 0, 0, 0, 0, 323, 139, 0, 0, 0, 0, 396, 177, 0, 0, 0, 0, 443, 232, 0, 0, 0, 0, 534, 289, 0, 0, 0, 0, 575, 326)
+}
+point_count = 9
+
+[sub_resource type="Curve2D" id="Curve2D_lorjv"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 343, 66, 0, 0, 0, 0, 421, 93, 0, 0, 0, 0, 471, 123, 0, 0, 0, 0, 531, 152, 0, 0, 0, 0, 539, 189)
+}
+point_count = 5
+
+[sub_resource type="Curve2D" id="Curve2D_4cw4t"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 838, 48, 0, 0, 0, 0, 754, 87, 0, 0, 0, 0, 722, 183, 0, 0, 0, 0, 341, 214)
+}
+point_count = 4
+
+[sub_resource type="Curve2D" id="Curve2D_yre8u"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 883, 53, 0, 0, 0, 0, 899, 132, 0, 0, 0, 0, 916, 215)
+}
+point_count = 3
+
+[sub_resource type="Curve2D" id="Curve2D_5seur"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 434, 59, 0, 0, 0, 0, 371, 120, 0, 0, 0, 0, 282, 110, 0, 0, 0, 0, 174, 142, 0, 0, 0, 0, 164, 200)
+}
+point_count = 5
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_nekx0"]
 animations = [{
@@ -391,25 +427,8 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="Curve2D" id="Curve2D_0yogx"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, 1058, 70, 0, 0, 0, 0, 913, 94, 0, 0, 0, 0, 823, 135, 0, 0, 0, 0, 779, 183, 0, 0, 0, 0, 779, 225, 0, 0, 0, 0, 783, 266, 0, 0, 0, 0, 754, 301, 0, 0, 0, 0, 717, 331, 0, 0, 0, 0, 626, 353)
-}
-point_count = 9
-
-[sub_resource type="Curve2D" id="Curve2D_yn5v8"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, 93, 70, 0, 0, 0, 0, 157, 81, 0, 0, 0, 0, 196, 155, 0, 0, 0, 0, 274, 164, 0, 0, 0, 0, 323, 139, 0, 0, 0, 0, 396, 177, 0, 0, 0, 0, 443, 232, 0, 0, 0, 0, 534, 289, 0, 0, 0, 0, 575, 326)
-}
-point_count = 9
-
 [node name="carfront" type="Node2D" unique_id=1941058003]
 script = ExtResource("1_fcdvi")
-
-[node name="CarfrontPlaceholDr" type="Sprite2D" parent="." unique_id=981950786]
-position = Vector2(579, 450.74997)
-scale = Vector2(1.7808642, 2.3906662)
-texture = ExtResource("1_3lwtp")
 
 [node name="trees" type="AnimatedSprite2D" parent="." unique_id=1442982864]
 position = Vector2(569, 336)
@@ -417,9 +436,75 @@ scale = Vector2(0.6400012, 0.6400012)
 sprite_frames = SubResource("SpriteFrames_hwc66")
 
 [node name="krobusChain" type="AnimatedSprite2D" parent="." unique_id=1981799782]
-position = Vector2(569, 488)
+position = Vector2(579, 413.00003)
+scale = Vector2(0.85787034, 0.8578704)
 sprite_frames = SubResource("SpriteFrames_87jk0")
 frame_progress = 0.6748723
+
+[node name="mobPath1" type="Path2D" parent="." unique_id=1943513510]
+curve = SubResource("Curve2D_0yogx")
+
+[node name="mobLoc" type="PathFollow2D" parent="mobPath1" unique_id=1223515463]
+position = Vector2(1058, 70)
+rotates = false
+loop = false
+script = ExtResource("3_gkhf7")
+mob_scene = ExtResource("2_gkhf7")
+
+[node name="mobPath2" type="Path2D" parent="." unique_id=675588195]
+curve = SubResource("Curve2D_yn5v8")
+
+[node name="mobLoc" type="PathFollow2D" parent="mobPath2" unique_id=443531142]
+position = Vector2(93, 70)
+rotates = false
+loop = false
+script = ExtResource("3_gkhf7")
+mob_scene = ExtResource("2_gkhf7")
+
+[node name="mobPath3" type="Path2D" parent="." unique_id=164760140]
+curve = SubResource("Curve2D_lorjv")
+
+[node name="mobLoc" type="PathFollow2D" parent="mobPath3" unique_id=347485635]
+position = Vector2(343, 66)
+rotates = false
+loop = false
+script = ExtResource("3_gkhf7")
+mob_scene = ExtResource("2_gkhf7")
+
+[node name="mobPath4" type="Path2D" parent="." unique_id=1621979013]
+curve = SubResource("Curve2D_4cw4t")
+
+[node name="mobLoc" type="PathFollow2D" parent="mobPath4" unique_id=1480644444]
+position = Vector2(838, 48)
+rotates = false
+loop = false
+script = ExtResource("3_gkhf7")
+mob_scene = ExtResource("2_gkhf7")
+
+[node name="mobPath5" type="Path2D" parent="." unique_id=1551048187]
+curve = SubResource("Curve2D_yre8u")
+
+[node name="mobLoc" type="PathFollow2D" parent="mobPath5" unique_id=2106236038]
+position = Vector2(883, 53)
+rotates = false
+loop = false
+script = ExtResource("3_gkhf7")
+mob_scene = ExtResource("2_gkhf7")
+
+[node name="mobPath6" type="Path2D" parent="." unique_id=720615488]
+curve = SubResource("Curve2D_5seur")
+
+[node name="mobLoc" type="PathFollow2D" parent="mobPath6" unique_id=411725575]
+position = Vector2(434, 59)
+rotates = false
+loop = false
+script = ExtResource("3_gkhf7")
+mob_scene = ExtResource("2_gkhf7")
+
+[node name="GetAwayCarFrontBg" type="Sprite2D" parent="." unique_id=2107685473]
+position = Vector2(578, 336)
+scale = Vector2(0.61111104, 0.611111)
+texture = ExtResource("8_lorjv")
 
 [node name="steeringWheel" type="AnimatedSprite2D" parent="." unique_id=1480555663]
 position = Vector2(569, 336)
@@ -458,26 +543,6 @@ offset_right = 708.0
 offset_bottom = 591.0
 text = "EJECT!"
 metadata/_edit_use_anchors_ = true
-
-[node name="mobPath1" type="Path2D" parent="." unique_id=1943513510]
-curve = SubResource("Curve2D_0yogx")
-
-[node name="mobLoc" type="PathFollow2D" parent="mobPath1" unique_id=1223515463]
-position = Vector2(1058, 70)
-rotates = false
-loop = false
-script = ExtResource("3_gkhf7")
-mob_scene = ExtResource("2_gkhf7")
-
-[node name="mobPath2" type="Path2D" parent="." unique_id=675588195]
-curve = SubResource("Curve2D_yn5v8")
-
-[node name="mobLoc" type="PathFollow2D" parent="mobPath2" unique_id=443531142]
-position = Vector2(93, 70)
-rotates = false
-loop = false
-script = ExtResource("3_gkhf7")
-mob_scene = ExtResource("2_gkhf7")
 
 [connection signal="pressed" from="lookLeft" to="." method="_on_look_left_pressed"]
 [connection signal="pressed" from="lookBack" to="." method="_on_look_back_pressed"]

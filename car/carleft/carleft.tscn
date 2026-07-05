@@ -1,8 +1,41 @@
 [gd_scene format=3 uid="uid://bx7thw5wkefxn"]
 
 [ext_resource type="Script" uid="uid://b4aubxout8twf" path="res://car/carleft/carleft.gd" id="1_tfxng"]
+[ext_resource type="Texture2D" uid="uid://cah6bgwtj42au" path="res://assets/animations/side trees animation/trees side_0000.png" id="2_3ctv2"]
 [ext_resource type="Script" uid="uid://5fttvvn3n5pe" path="res://car/carfront/mob_loc.gd" id="2_y3lde"]
 [ext_resource type="PackedScene" uid="uid://c750l2865gfdp" path="res://badguy/mob.tscn" id="3_cimb5"]
+[ext_resource type="Texture2D" uid="uid://dwe2apao1crhb" path="res://assets/animations/side trees animation/trees side_0001.png" id="3_kpsvt"]
+[ext_resource type="Texture2D" uid="uid://cwwh0foaftcfn" path="res://assets/animations/side trees animation/trees side_0002.png" id="4_wjctv"]
+[ext_resource type="Texture2D" uid="uid://trfxdp46n3yk" path="res://assets/animations/side trees animation/trees side_0003.png" id="5_gk12i"]
+[ext_resource type="Texture2D" uid="uid://bjdxe7epowt3l" path="res://assets/animations/side trees animation/trees side_0004.png" id="6_p8a40"]
+[ext_resource type="Texture2D" uid="uid://1vudvm4pae7j" path="res://assets/animations/side trees animation/trees side_0005.png" id="7_diqhs"]
+[ext_resource type="Texture2D" uid="uid://bdejmfra5oui1" path="res://assets/images/car side bg.png" id="8_8nw1u"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nh3q5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_3ctv2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_kpsvt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_wjctv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_gk12i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_p8a40")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_diqhs")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="Curve2D" id="Curve2D_hnajx"]
 _data = {
@@ -18,6 +51,17 @@ point_count = 9
 
 [node name="carleft" type="Node2D" unique_id=115809439]
 script = ExtResource("1_tfxng")
+
+[node name="trees" type="AnimatedSprite2D" parent="." unique_id=200989727]
+position = Vector2(574.88885, 324.49997)
+scale = Vector2(0.6009259, 0.6009259)
+sprite_frames = SubResource("SpriteFrames_nh3q5")
+frame_progress = 0.89358056
+
+[node name="CarSideBg" type="Sprite2D" parent="." unique_id=2010433583]
+position = Vector2(632.8889, 340)
+scale = Vector2(0.65925926, 0.65925926)
+texture = ExtResource("8_8nw1u")
 
 [node name="lookFront" type="Button" parent="." unique_id=1299905443]
 offset_left = 906.0

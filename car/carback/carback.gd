@@ -9,8 +9,10 @@ func _ready() -> void:
 
 
 func spawn_mob(type : String, speed : float = 1):
-	print_debug("spawning mob from back path 1")
-	$mobPath1/mobLoc.spawn_mob(type, speed)
+	var path = randi_range(1, 1)
+	print_debug("Spawning mob from back path %d" % path)
+	get_node("mobPath%d/mobLoc" % path).spawn_mob(type, speed)		
+		
 
 func _on_look_front_pressed() -> void:
 	print_debug("look front button pressed")

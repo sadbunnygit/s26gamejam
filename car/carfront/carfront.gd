@@ -17,13 +17,9 @@ func _ready() -> void:
 
 
 func spawn_mob(type : String, speed : float = 1):
-	var path = randi_range(1,2) 
-	if (path == 1):
-		print_debug("spawning mob from front path 1")
-		$mobPath1/mobLoc.spawn_mob(type, speed)
-	elif (path == 2):
-		print_debug("spawning mob from front path 2")
-		$mobPath2/mobLoc.spawn_mob(type, speed)
+	var path = randi_range(1, 6)
+	print_debug("Spawning mob from front path %d" % path)
+	get_node("mobPath%d/mobLoc" % path).spawn_mob(type, speed)		
 		
 
 # Look around buttons 

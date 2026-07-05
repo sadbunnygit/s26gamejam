@@ -74,6 +74,7 @@ func newPassenger(mob) -> void:
 
 func eject() -> void:
 	print_debug("ejecting", passenger)
+	passenger.get_node("Timer").stop()
 	if passenger == null:
 		return
 	viewBack()
@@ -105,7 +106,7 @@ func win():
 	get_tree().change_scene_to_file("res://winner.tscn")
 
 
-func _on_spawntimer_timeout() -> void:  # 8 seconds rn
+func _on_spawntimer_timeout() -> void: 
 	var type = "monster_" + str(gamePhase)
 	var side = randi_range(0,99)
 	var speed = randf_range(2,5)
@@ -115,7 +116,7 @@ func _on_spawntimer_timeout() -> void:  # 8 seconds rn
 		type = "human"
 		humanSpawned = true
 	print_debug("spawning: ", type)
-	if (side <= 25): #front
+	if (side <= 100): #front
 		cfront.spawn_mob(type, speed)
 	elif (side <= 45): #back
 		cback.spawn_mob(type, speed)
@@ -123,6 +124,8 @@ func _on_spawntimer_timeout() -> void:  # 8 seconds rn
 		cleft.spawn_mob(type, speed)
 	elif (side <= 91): #right
 		cright.spawn_mob(type, speed)
+	else:
+		$spawnTimer.start(10)
 
 
 func _on_gametimer_timeout() -> void: # 30 secs

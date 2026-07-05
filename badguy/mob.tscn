@@ -4,14 +4,50 @@
 [ext_resource type="PackedScene" uid="uid://c3kparcjfyubo" path="res://badguy/interact.tscn" id="2_plv4x"]
 [ext_resource type="PackedScene" uid="uid://skpwy4scnbr7" path="res://badguy/dialogue.tscn" id="3_qwcij"]
 [ext_resource type="Texture2D" uid="uid://bnushej7d6tg1" path="res://assets/zero.jpg" id="4_fgj1c"]
+[ext_resource type="Texture2D" uid="uid://k5wa8foug48s" path="res://assets/images/characters/danelle.png" id="4_vc44r"]
 [ext_resource type="Texture2D" uid="uid://dpwtrknqsexdj" path="res://assets/one.png" id="5_qwcij"]
+[ext_resource type="Texture2D" uid="uid://buyonqsk3bjx" path="res://assets/images/characters/meghan.png" id="5_xfpg3"]
+[ext_resource type="Texture2D" uid="uid://bkfawqvvfsb7n" path="res://assets/images/characters/sandy.png" id="6_v474o"]
 [ext_resource type="Texture2D" uid="uid://kdgwa5op7plv" path="res://assets/two.webp" id="6_ygbpr"]
+[ext_resource type="Texture2D" uid="uid://brfos7mqb8eio" path="res://assets/images/characters/vicki.png" id="7_8qbbf"]
 [ext_resource type="Texture2D" uid="uid://dj2pxpgwbpd7j" path="res://assets/3.jpg" id="7_bcn8y"]
 [ext_resource type="Texture2D" uid="uid://brqcrm5xm325f" path="res://icon.svg" id="7_plv4x"]
 [ext_resource type="AudioStream" uid="uid://06qykhoby8di" path="res://assets/audio/dragon-studio-spooky-scary-sound-410563.mp3" id="8_fgj1c"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_87jk0"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_vc44r")
+}],
+"loop": 1,
+"name": &"Danelle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_xfpg3")
+}],
+"loop": 1,
+"name": &"Meghan",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_v474o")
+}],
+"loop": 1,
+"name": &"Sandy",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_8qbbf")
+}],
+"loop": 1,
+"name": &"Vicki",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("7_plv4x")
@@ -51,11 +87,6 @@ animations = [{
 "loop": 1,
 "name": &"monster_3",
 "speed": 5.0
-}, {
-"frames": [],
-"loop": 1,
-"name": &"new_animation",
-"speed": 5.0
 }]
 
 [node name="Mob" type="Node2D" unique_id=1486219742]
@@ -66,7 +97,7 @@ metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1480124001]
 sprite_frames = SubResource("SpriteFrames_87jk0")
-animation = &"monster_3"
+animation = &"Vicki"
 metadata/_edit_group_ = true
 
 [node name="monster" type="AudioStreamPlayer2D" parent="." unique_id=979830762]
