@@ -4,87 +4,85 @@
 [ext_resource type="Script" uid="uid://j1o8f51nm2kt" path="res://car/carfront/carfront.gd" id="1_fcdvi"]
 [ext_resource type="PackedScene" uid="uid://c750l2865gfdp" path="res://badguy/mob.tscn" id="2_gkhf7"]
 [ext_resource type="Script" uid="uid://5fttvvn3n5pe" path="res://car/carfront/mob_loc.gd" id="3_gkhf7"]
-[ext_resource type="Texture2D" uid="uid://baqew1xga5nug" path="res://assets/animations/trees/trees_0000.png" id="3_j4vjv"]
-[ext_resource type="AudioStream" uid="uid://0f7c8vul4uhr" path="res://assets/audio/universfield-spring-boing-229170.mp3" id="3_m0eta"]
-[ext_resource type="AudioStream" uid="uid://c5g5wmns1nud3" path="res://assets/audio/u_b32baquv5u-explosion-9-340460.mp3" id="4_l404k"]
-[ext_resource type="Texture2D" uid="uid://cmb0uj5a44app" path="res://assets/animations/trees/trees_0001.png" id="4_lstew"]
-[ext_resource type="Texture2D" uid="uid://d21k8hnb0cs1x" path="res://assets/animations/trees/trees_0002.png" id="5_fy7pp"]
-[ext_resource type="Texture2D" uid="uid://bm5rkevvyqhe6" path="res://assets/animations/trees/trees_0003.png" id="6_klg5r"]
-[ext_resource type="Texture2D" uid="uid://dqj6ascla5tx3" path="res://assets/animations/trees/trees_0004.png" id="7_hvlmc"]
-[ext_resource type="Texture2D" uid="uid://dy1avexv1aile" path="res://assets/animations/trees/trees_0005.png" id="8_5tl3y"]
-[ext_resource type="Texture2D" uid="uid://cuvuljq521f64" path="res://assets/animations/krobus keychain/krobus keychain_0000.png" id="9_ktsaq"]
-[ext_resource type="Texture2D" uid="uid://c1qrdwgh2ldev" path="res://assets/animations/krobus keychain/krobus keychain_0001.png" id="10_v6xfe"]
-[ext_resource type="Texture2D" uid="uid://4hxhfqoy2w2p" path="res://assets/animations/krobus keychain/krobus keychain_0002.png" id="11_jn0tp"]
-[ext_resource type="Texture2D" uid="uid://d4flah1x7ben8" path="res://assets/animations/krobus keychain/krobus keychain_0003.png" id="12_l8ovx"]
-[ext_resource type="Texture2D" uid="uid://bxou24kywcrkp" path="res://assets/animations/krobus keychain/krobus keychain_0004.png" id="13_ebu8f"]
-[ext_resource type="Texture2D" uid="uid://cw20dh2j54abc" path="res://assets/animations/krobus keychain/krobus keychain_0005.png" id="14_lh7ya"]
-[ext_resource type="Texture2D" uid="uid://dg7i2h4kvscxa" path="res://assets/animations/krobus keychain/krobus keychain_0006.png" id="15_a2h26"]
-[ext_resource type="Texture2D" uid="uid://cv21y8f3iq7xs" path="res://assets/animations/krobus keychain/krobus keychain_0007.png" id="16_vq1ak"]
-[ext_resource type="Texture2D" uid="uid://bg7srvgjulcqq" path="res://assets/animations/krobus keychain/krobus keychain_0008.png" id="17_e1rws"]
-[ext_resource type="Texture2D" uid="uid://c2v1c53n04815" path="res://assets/animations/krobus keychain/krobus keychain_0009.png" id="18_k3n1t"]
-[ext_resource type="Texture2D" uid="uid://cwvaj1hskbx85" path="res://assets/animations/krobus keychain/krobus keychain_0010.png" id="19_y61gi"]
-[ext_resource type="Texture2D" uid="uid://d0l5fgh47nqx5" path="res://assets/animations/krobus keychain/krobus keychain_0011.png" id="20_wvn01"]
-[ext_resource type="Texture2D" uid="uid://bjlur7e5jhnbu" path="res://assets/animations/steering/wheel left/wheel left_0000.png" id="21_yre8u"]
-[ext_resource type="Texture2D" uid="uid://c2x54kt430s2l" path="res://assets/animations/steering/wheel left/wheel left_0001.png" id="22_5seur"]
-[ext_resource type="Texture2D" uid="uid://bx6r42rwgvd3k" path="res://assets/animations/steering/wheel left/wheel left_0002.png" id="23_tjke4"]
-[ext_resource type="Texture2D" uid="uid://da05mhqb0kw0m" path="res://assets/animations/steering/wheel left/wheel left_0003.png" id="24_hxl01"]
-[ext_resource type="Texture2D" uid="uid://desomepb6wfcp" path="res://assets/animations/steering/wheel left/wheel left_0004.png" id="25_ifog0"]
-[ext_resource type="Texture2D" uid="uid://bf8k50cxw7oqc" path="res://assets/animations/steering/wheel left/wheel left_0005.png" id="26_k2wxn"]
-[ext_resource type="Texture2D" uid="uid://dukaw15k1itxc" path="res://assets/animations/steering/wheel left/wheel left_0006.png" id="27_6pj10"]
-[ext_resource type="Texture2D" uid="uid://1irlua3lklhe" path="res://assets/animations/steering/wheel left/wheel left_0007.png" id="28_kg4ca"]
-[ext_resource type="Texture2D" uid="uid://dduur3dop7jf6" path="res://assets/animations/steering/wheel left/wheel left_0008.png" id="29_aau50"]
-[ext_resource type="Texture2D" uid="uid://bbtqqj4eod0g8" path="res://assets/animations/steering/wheel left/wheel left_0009.png" id="30_2ydeg"]
-[ext_resource type="Texture2D" uid="uid://qnqm2rridn5e" path="res://assets/animations/steering/wheel left/wheel left_0010.png" id="31_ftqm1"]
-[ext_resource type="Texture2D" uid="uid://mjebbagbq3e7" path="res://assets/animations/steering/wheel left/wheel left_0011.png" id="32_g56tf"]
-[ext_resource type="Texture2D" uid="uid://bcmifunvk3o7w" path="res://assets/animations/steering/wheel left/wheel left_0012.png" id="33_b5olt"]
-[ext_resource type="Texture2D" uid="uid://c0n0l0ld61g3y" path="res://assets/animations/steering/wheel left/wheel left_0013.png" id="34_ai3o7"]
-[ext_resource type="Texture2D" uid="uid://cf5dx24nw7m60" path="res://assets/animations/steering/wheel left/wheel left_0014.png" id="35_eth03"]
-[ext_resource type="Texture2D" uid="uid://cb12hy2yq3k1q" path="res://assets/animations/steering/wheel left/wheel left_0015.png" id="36_gya28"]
-[ext_resource type="Texture2D" uid="uid://6tupe6vbk6se" path="res://assets/animations/steering/wheel left/wheel left_0016.png" id="37_ikv5h"]
-[ext_resource type="Texture2D" uid="uid://5d1j3fvm4ncf" path="res://assets/animations/steering/wheel left/wheel left_0017.png" id="38_b2c1x"]
-[ext_resource type="Texture2D" uid="uid://drkojqgyv8uf7" path="res://assets/animations/steering/wheel left/wheel left_0018.png" id="39_w0o21"]
-[ext_resource type="Texture2D" uid="uid://cmvnr4jmkyo7u" path="res://assets/animations/steering/wheel left/wheel left_0019.png" id="40_4yjsj"]
-[ext_resource type="Texture2D" uid="uid://ciw5i1uiywafu" path="res://assets/animations/steering/wheel right/wheel right_0000.png" id="41_wyd6f"]
-[ext_resource type="Texture2D" uid="uid://x7njbfihvls" path="res://assets/animations/steering/wheel right/wheel right_0001.png" id="42_nqukw"]
-[ext_resource type="Texture2D" uid="uid://du5bxo5nlg2yo" path="res://assets/animations/steering/wheel right/wheel right_0002.png" id="43_q8y1d"]
-[ext_resource type="Texture2D" uid="uid://v27watq780xg" path="res://assets/animations/steering/wheel right/wheel right_0003.png" id="44_55goj"]
-[ext_resource type="Texture2D" uid="uid://b2yoqsueetua1" path="res://assets/animations/steering/wheel right/wheel right_0004.png" id="45_fdae5"]
-[ext_resource type="Texture2D" uid="uid://mxux20ed8j8u" path="res://assets/animations/steering/wheel right/wheel right_0005.png" id="46_mo5yk"]
-[ext_resource type="Texture2D" uid="uid://c0uvt4gf3fhm1" path="res://assets/animations/steering/wheel right/wheel right_0006.png" id="47_jwj1y"]
-[ext_resource type="Texture2D" uid="uid://dhss2t0lbrn5m" path="res://assets/animations/steering/wheel right/wheel right_0007.png" id="48_exg70"]
-[ext_resource type="Texture2D" uid="uid://fk5noyq3qjm4" path="res://assets/animations/steering/wheel right/wheel right_0008.png" id="49_gfkul"]
-[ext_resource type="Texture2D" uid="uid://e0e0dnihuhpt" path="res://assets/animations/steering/wheel right/wheel right_0009.png" id="50_81pxr"]
-[ext_resource type="Texture2D" uid="uid://c3ra2msv8413k" path="res://assets/animations/steering/wheel right/wheel right_0010.png" id="51_gisse"]
-[ext_resource type="Texture2D" uid="uid://cx1516lfnqv4v" path="res://assets/animations/steering/wheel right/wheel right_0011.png" id="52_w0hli"]
-[ext_resource type="Texture2D" uid="uid://chattfrvql4uy" path="res://assets/animations/steering/wheel right/wheel right_0012.png" id="53_s35cw"]
-[ext_resource type="Texture2D" uid="uid://1f3d53ja78hk" path="res://assets/animations/steering/wheel right/wheel right_0013.png" id="54_j50e0"]
-[ext_resource type="Texture2D" uid="uid://dy5kqpb63wapr" path="res://assets/animations/steering/wheel right/wheel right_0014.png" id="55_7wpdw"]
-[ext_resource type="Texture2D" uid="uid://c2boyixiksy0t" path="res://assets/animations/steering/wheel right/wheel right_0015.png" id="56_yjcam"]
-[ext_resource type="Texture2D" uid="uid://bjyxccklcxowl" path="res://assets/animations/steering/wheel right/wheel right_0016.png" id="57_78es8"]
-[ext_resource type="Texture2D" uid="uid://b3e8m4yhw0m43" path="res://assets/animations/steering/wheel right/wheel right_0017.png" id="58_j7n1e"]
-[ext_resource type="Texture2D" uid="uid://bkqddfieghds0" path="res://assets/animations/steering/wheel right/wheel right_0018.png" id="59_scelf"]
-[ext_resource type="Texture2D" uid="uid://cmyn6mdbbh16e" path="res://assets/animations/steering/wheel right/wheel right_0019.png" id="60_ldkuw"]
+[ext_resource type="Texture2D" uid="uid://baqew1xga5nug" path="res://assets/animations/frontseat/trees/trees_0000.png" id="3_lorjv"]
+[ext_resource type="Texture2D" uid="uid://cmb0uj5a44app" path="res://assets/animations/frontseat/trees/trees_0001.png" id="4_4cw4t"]
+[ext_resource type="Texture2D" uid="uid://d21k8hnb0cs1x" path="res://assets/animations/frontseat/trees/trees_0002.png" id="5_yre8u"]
+[ext_resource type="Texture2D" uid="uid://bm5rkevvyqhe6" path="res://assets/animations/frontseat/trees/trees_0003.png" id="6_5seur"]
+[ext_resource type="Texture2D" uid="uid://dqj6ascla5tx3" path="res://assets/animations/frontseat/trees/trees_0004.png" id="7_tjke4"]
+[ext_resource type="Texture2D" uid="uid://dy1avexv1aile" path="res://assets/animations/frontseat/trees/trees_0005.png" id="8_hxl01"]
+[ext_resource type="Texture2D" uid="uid://cuvuljq521f64" path="res://assets/animations/frontseat/krobus keychain/krobus keychain_0000.png" id="9_ifog0"]
+[ext_resource type="Texture2D" uid="uid://c1qrdwgh2ldev" path="res://assets/animations/frontseat/krobus keychain/krobus keychain_0001.png" id="10_k2wxn"]
+[ext_resource type="Texture2D" uid="uid://4hxhfqoy2w2p" path="res://assets/animations/frontseat/krobus keychain/krobus keychain_0002.png" id="11_6pj10"]
+[ext_resource type="Texture2D" uid="uid://d4flah1x7ben8" path="res://assets/animations/frontseat/krobus keychain/krobus keychain_0003.png" id="12_kg4ca"]
+[ext_resource type="Texture2D" uid="uid://bxou24kywcrkp" path="res://assets/animations/frontseat/krobus keychain/krobus keychain_0004.png" id="13_aau50"]
+[ext_resource type="Texture2D" uid="uid://cw20dh2j54abc" path="res://assets/animations/frontseat/krobus keychain/krobus keychain_0005.png" id="14_2ydeg"]
+[ext_resource type="Texture2D" uid="uid://dg7i2h4kvscxa" path="res://assets/animations/frontseat/krobus keychain/krobus keychain_0006.png" id="15_ftqm1"]
+[ext_resource type="Texture2D" uid="uid://cv21y8f3iq7xs" path="res://assets/animations/frontseat/krobus keychain/krobus keychain_0007.png" id="16_g56tf"]
+[ext_resource type="Texture2D" uid="uid://bg7srvgjulcqq" path="res://assets/animations/frontseat/krobus keychain/krobus keychain_0008.png" id="17_b5olt"]
+[ext_resource type="Texture2D" uid="uid://c2v1c53n04815" path="res://assets/animations/frontseat/krobus keychain/krobus keychain_0009.png" id="18_ai3o7"]
+[ext_resource type="Texture2D" uid="uid://cwvaj1hskbx85" path="res://assets/animations/frontseat/krobus keychain/krobus keychain_0010.png" id="19_eth03"]
+[ext_resource type="Texture2D" uid="uid://d0l5fgh47nqx5" path="res://assets/animations/frontseat/krobus keychain/krobus keychain_0011.png" id="20_gya28"]
+[ext_resource type="Texture2D" uid="uid://ciw5i1uiywafu" path="res://assets/animations/frontseat/steering/wheel right/wheel right_0000.png" id="21_ikv5h"]
+[ext_resource type="Texture2D" uid="uid://x7njbfihvls" path="res://assets/animations/frontseat/steering/wheel right/wheel right_0001.png" id="22_b2c1x"]
+[ext_resource type="Texture2D" uid="uid://du5bxo5nlg2yo" path="res://assets/animations/frontseat/steering/wheel right/wheel right_0002.png" id="23_w0o21"]
+[ext_resource type="Texture2D" uid="uid://v27watq780xg" path="res://assets/animations/frontseat/steering/wheel right/wheel right_0003.png" id="24_4yjsj"]
+[ext_resource type="Texture2D" uid="uid://b2yoqsueetua1" path="res://assets/animations/frontseat/steering/wheel right/wheel right_0004.png" id="25_wyd6f"]
+[ext_resource type="Texture2D" uid="uid://mxux20ed8j8u" path="res://assets/animations/frontseat/steering/wheel right/wheel right_0005.png" id="26_nqukw"]
+[ext_resource type="Texture2D" uid="uid://c0uvt4gf3fhm1" path="res://assets/animations/frontseat/steering/wheel right/wheel right_0006.png" id="27_q8y1d"]
+[ext_resource type="Texture2D" uid="uid://dhss2t0lbrn5m" path="res://assets/animations/frontseat/steering/wheel right/wheel right_0007.png" id="28_55goj"]
+[ext_resource type="Texture2D" uid="uid://fk5noyq3qjm4" path="res://assets/animations/frontseat/steering/wheel right/wheel right_0008.png" id="29_fdae5"]
+[ext_resource type="Texture2D" uid="uid://e0e0dnihuhpt" path="res://assets/animations/frontseat/steering/wheel right/wheel right_0009.png" id="30_mo5yk"]
+[ext_resource type="Texture2D" uid="uid://c3ra2msv8413k" path="res://assets/animations/frontseat/steering/wheel right/wheel right_0010.png" id="31_jwj1y"]
+[ext_resource type="Texture2D" uid="uid://cx1516lfnqv4v" path="res://assets/animations/frontseat/steering/wheel right/wheel right_0011.png" id="32_exg70"]
+[ext_resource type="Texture2D" uid="uid://chattfrvql4uy" path="res://assets/animations/frontseat/steering/wheel right/wheel right_0012.png" id="33_gfkul"]
+[ext_resource type="Texture2D" uid="uid://1f3d53ja78hk" path="res://assets/animations/frontseat/steering/wheel right/wheel right_0013.png" id="34_81pxr"]
+[ext_resource type="Texture2D" uid="uid://dy5kqpb63wapr" path="res://assets/animations/frontseat/steering/wheel right/wheel right_0014.png" id="35_gisse"]
+[ext_resource type="Texture2D" uid="uid://c2boyixiksy0t" path="res://assets/animations/frontseat/steering/wheel right/wheel right_0015.png" id="36_w0hli"]
+[ext_resource type="Texture2D" uid="uid://bjyxccklcxowl" path="res://assets/animations/frontseat/steering/wheel right/wheel right_0016.png" id="37_s35cw"]
+[ext_resource type="Texture2D" uid="uid://b3e8m4yhw0m43" path="res://assets/animations/frontseat/steering/wheel right/wheel right_0017.png" id="38_j50e0"]
+[ext_resource type="Texture2D" uid="uid://bkqddfieghds0" path="res://assets/animations/frontseat/steering/wheel right/wheel right_0018.png" id="39_7wpdw"]
+[ext_resource type="Texture2D" uid="uid://cmyn6mdbbh16e" path="res://assets/animations/frontseat/steering/wheel right/wheel right_0019.png" id="40_yjcam"]
+[ext_resource type="Texture2D" uid="uid://bjlur7e5jhnbu" path="res://assets/animations/frontseat/steering/wheel left/wheel left_0000.png" id="41_78es8"]
+[ext_resource type="Texture2D" uid="uid://c2x54kt430s2l" path="res://assets/animations/frontseat/steering/wheel left/wheel left_0001.png" id="42_j7n1e"]
+[ext_resource type="Texture2D" uid="uid://bx6r42rwgvd3k" path="res://assets/animations/frontseat/steering/wheel left/wheel left_0002.png" id="43_scelf"]
+[ext_resource type="Texture2D" uid="uid://da05mhqb0kw0m" path="res://assets/animations/frontseat/steering/wheel left/wheel left_0003.png" id="44_ldkuw"]
+[ext_resource type="Texture2D" uid="uid://desomepb6wfcp" path="res://assets/animations/frontseat/steering/wheel left/wheel left_0004.png" id="45_p8ql5"]
+[ext_resource type="Texture2D" uid="uid://bf8k50cxw7oqc" path="res://assets/animations/frontseat/steering/wheel left/wheel left_0005.png" id="46_6lyy4"]
+[ext_resource type="Texture2D" uid="uid://dukaw15k1itxc" path="res://assets/animations/frontseat/steering/wheel left/wheel left_0006.png" id="47_3bccc"]
+[ext_resource type="Texture2D" uid="uid://1irlua3lklhe" path="res://assets/animations/frontseat/steering/wheel left/wheel left_0007.png" id="48_l78rd"]
+[ext_resource type="Texture2D" uid="uid://dduur3dop7jf6" path="res://assets/animations/frontseat/steering/wheel left/wheel left_0008.png" id="49_6k4rn"]
+[ext_resource type="Texture2D" uid="uid://bbtqqj4eod0g8" path="res://assets/animations/frontseat/steering/wheel left/wheel left_0009.png" id="50_l3esy"]
+[ext_resource type="Texture2D" uid="uid://qnqm2rridn5e" path="res://assets/animations/frontseat/steering/wheel left/wheel left_0010.png" id="51_kgocv"]
+[ext_resource type="Texture2D" uid="uid://mjebbagbq3e7" path="res://assets/animations/frontseat/steering/wheel left/wheel left_0011.png" id="52_0eta2"]
+[ext_resource type="Texture2D" uid="uid://bcmifunvk3o7w" path="res://assets/animations/frontseat/steering/wheel left/wheel left_0012.png" id="53_f2uhj"]
+[ext_resource type="Texture2D" uid="uid://c0n0l0ld61g3y" path="res://assets/animations/frontseat/steering/wheel left/wheel left_0013.png" id="54_rp7pv"]
+[ext_resource type="Texture2D" uid="uid://cf5dx24nw7m60" path="res://assets/animations/frontseat/steering/wheel left/wheel left_0014.png" id="55_j86pn"]
+[ext_resource type="Texture2D" uid="uid://cb12hy2yq3k1q" path="res://assets/animations/frontseat/steering/wheel left/wheel left_0015.png" id="56_5mu71"]
+[ext_resource type="Texture2D" uid="uid://6tupe6vbk6se" path="res://assets/animations/frontseat/steering/wheel left/wheel left_0016.png" id="57_tnr2t"]
+[ext_resource type="Texture2D" uid="uid://5d1j3fvm4ncf" path="res://assets/animations/frontseat/steering/wheel left/wheel left_0017.png" id="58_o1veb"]
+[ext_resource type="Texture2D" uid="uid://drkojqgyv8uf7" path="res://assets/animations/frontseat/steering/wheel left/wheel left_0018.png" id="59_wqbxa"]
+[ext_resource type="Texture2D" uid="uid://cmvnr4jmkyo7u" path="res://assets/animations/frontseat/steering/wheel left/wheel left_0019.png" id="60_gwxdn"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hwc66"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_j4vjv")
+"texture": ExtResource("3_lorjv")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_lstew")
+"texture": ExtResource("4_4cw4t")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_fy7pp")
+"texture": ExtResource("5_yre8u")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_klg5r")
+"texture": ExtResource("6_5seur")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_hvlmc")
+"texture": ExtResource("7_tjke4")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_5tl3y")
+"texture": ExtResource("8_hxl01")
 }],
 "loop": 1,
 "name": &"default",
@@ -95,40 +93,40 @@ animations = [{
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("9_ktsaq")
+"texture": ExtResource("9_ifog0")
 }, {
 "duration": 1.0,
-"texture": ExtResource("10_v6xfe")
+"texture": ExtResource("10_k2wxn")
 }, {
 "duration": 1.0,
-"texture": ExtResource("11_jn0tp")
+"texture": ExtResource("11_6pj10")
 }, {
 "duration": 1.0,
-"texture": ExtResource("12_l8ovx")
+"texture": ExtResource("12_kg4ca")
 }, {
 "duration": 1.0,
-"texture": ExtResource("13_ebu8f")
+"texture": ExtResource("13_aau50")
 }, {
 "duration": 1.0,
-"texture": ExtResource("14_lh7ya")
+"texture": ExtResource("14_2ydeg")
 }, {
 "duration": 1.0,
-"texture": ExtResource("15_a2h26")
+"texture": ExtResource("15_ftqm1")
 }, {
 "duration": 1.0,
-"texture": ExtResource("16_vq1ak")
+"texture": ExtResource("16_g56tf")
 }, {
 "duration": 1.0,
-"texture": ExtResource("17_e1rws")
+"texture": ExtResource("17_b5olt")
 }, {
 "duration": 1.0,
-"texture": ExtResource("18_k3n1t")
+"texture": ExtResource("18_ai3o7")
 }, {
 "duration": 1.0,
-"texture": ExtResource("19_y61gi")
+"texture": ExtResource("19_eth03")
 }, {
 "duration": 1.0,
-"texture": ExtResource("20_wvn01")
+"texture": ExtResource("20_gya28")
 }],
 "loop": 1,
 "name": &"default",
@@ -139,124 +137,124 @@ animations = [{
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("41_wyd6f")
+"texture": ExtResource("21_ikv5h")
 }, {
 "duration": 1.0,
-"texture": ExtResource("42_nqukw")
+"texture": ExtResource("22_b2c1x")
 }, {
 "duration": 1.0,
-"texture": ExtResource("43_q8y1d")
+"texture": ExtResource("23_w0o21")
 }, {
 "duration": 1.0,
-"texture": ExtResource("44_55goj")
+"texture": ExtResource("24_4yjsj")
 }, {
 "duration": 1.0,
-"texture": ExtResource("45_fdae5")
+"texture": ExtResource("25_wyd6f")
 }, {
 "duration": 1.0,
-"texture": ExtResource("46_mo5yk")
+"texture": ExtResource("26_nqukw")
 }, {
 "duration": 1.0,
-"texture": ExtResource("47_jwj1y")
+"texture": ExtResource("27_q8y1d")
 }, {
 "duration": 1.0,
-"texture": ExtResource("48_exg70")
+"texture": ExtResource("28_55goj")
 }, {
 "duration": 1.0,
-"texture": ExtResource("49_gfkul")
+"texture": ExtResource("29_fdae5")
 }, {
 "duration": 1.0,
-"texture": ExtResource("50_81pxr")
+"texture": ExtResource("30_mo5yk")
 }, {
 "duration": 1.0,
-"texture": ExtResource("51_gisse")
+"texture": ExtResource("31_jwj1y")
 }, {
 "duration": 1.0,
-"texture": ExtResource("52_w0hli")
+"texture": ExtResource("32_exg70")
 }, {
 "duration": 1.0,
-"texture": ExtResource("53_s35cw")
+"texture": ExtResource("33_gfkul")
 }, {
 "duration": 1.0,
-"texture": ExtResource("54_j50e0")
+"texture": ExtResource("34_81pxr")
 }, {
 "duration": 1.0,
-"texture": ExtResource("55_7wpdw")
+"texture": ExtResource("35_gisse")
 }, {
 "duration": 1.0,
-"texture": ExtResource("56_yjcam")
+"texture": ExtResource("36_w0hli")
 }, {
 "duration": 1.0,
-"texture": ExtResource("57_78es8")
+"texture": ExtResource("37_s35cw")
 }, {
 "duration": 1.0,
-"texture": ExtResource("58_j7n1e")
+"texture": ExtResource("38_j50e0")
 }, {
 "duration": 1.0,
-"texture": ExtResource("59_scelf")
+"texture": ExtResource("39_7wpdw")
 }, {
 "duration": 1.0,
-"texture": ExtResource("60_ldkuw")
+"texture": ExtResource("40_yjcam")
 }, {
 "duration": 1.0,
-"texture": ExtResource("21_yre8u")
+"texture": ExtResource("41_78es8")
 }, {
 "duration": 1.0,
-"texture": ExtResource("22_5seur")
+"texture": ExtResource("42_j7n1e")
 }, {
 "duration": 1.0,
-"texture": ExtResource("23_tjke4")
+"texture": ExtResource("43_scelf")
 }, {
 "duration": 1.0,
-"texture": ExtResource("24_hxl01")
+"texture": ExtResource("44_ldkuw")
 }, {
 "duration": 1.0,
-"texture": ExtResource("25_ifog0")
+"texture": ExtResource("45_p8ql5")
 }, {
 "duration": 1.0,
-"texture": ExtResource("26_k2wxn")
+"texture": ExtResource("46_6lyy4")
 }, {
 "duration": 1.0,
-"texture": ExtResource("27_6pj10")
+"texture": ExtResource("47_3bccc")
 }, {
 "duration": 1.0,
-"texture": ExtResource("28_kg4ca")
+"texture": ExtResource("48_l78rd")
 }, {
 "duration": 1.0,
-"texture": ExtResource("29_aau50")
+"texture": ExtResource("49_6k4rn")
 }, {
 "duration": 1.0,
-"texture": ExtResource("30_2ydeg")
+"texture": ExtResource("50_l3esy")
 }, {
 "duration": 1.0,
-"texture": ExtResource("31_ftqm1")
+"texture": ExtResource("51_kgocv")
 }, {
 "duration": 1.0,
-"texture": ExtResource("32_g56tf")
+"texture": ExtResource("52_0eta2")
 }, {
 "duration": 1.0,
-"texture": ExtResource("33_b5olt")
+"texture": ExtResource("53_f2uhj")
 }, {
 "duration": 1.0,
-"texture": ExtResource("34_ai3o7")
+"texture": ExtResource("54_rp7pv")
 }, {
 "duration": 1.0,
-"texture": ExtResource("35_eth03")
+"texture": ExtResource("55_j86pn")
 }, {
 "duration": 1.0,
-"texture": ExtResource("36_gya28")
+"texture": ExtResource("56_5mu71")
 }, {
 "duration": 1.0,
-"texture": ExtResource("37_ikv5h")
+"texture": ExtResource("57_tnr2t")
 }, {
 "duration": 1.0,
-"texture": ExtResource("38_b2c1x")
+"texture": ExtResource("58_o1veb")
 }, {
 "duration": 1.0,
-"texture": ExtResource("39_w0o21")
+"texture": ExtResource("59_wqbxa")
 }, {
 "duration": 1.0,
-"texture": ExtResource("40_4yjsj")
+"texture": ExtResource("60_gwxdn")
 }],
 "loop": 1,
 "name": &"both",
@@ -264,64 +262,64 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("21_yre8u")
+"texture": ExtResource("41_78es8")
 }, {
 "duration": 1.0,
-"texture": ExtResource("22_5seur")
+"texture": ExtResource("42_j7n1e")
 }, {
 "duration": 1.0,
-"texture": ExtResource("23_tjke4")
+"texture": ExtResource("43_scelf")
 }, {
 "duration": 1.0,
-"texture": ExtResource("24_hxl01")
+"texture": ExtResource("44_ldkuw")
 }, {
 "duration": 1.0,
-"texture": ExtResource("25_ifog0")
+"texture": ExtResource("45_p8ql5")
 }, {
 "duration": 1.0,
-"texture": ExtResource("26_k2wxn")
+"texture": ExtResource("46_6lyy4")
 }, {
 "duration": 1.0,
-"texture": ExtResource("27_6pj10")
+"texture": ExtResource("47_3bccc")
 }, {
 "duration": 1.0,
-"texture": ExtResource("28_kg4ca")
+"texture": ExtResource("48_l78rd")
 }, {
 "duration": 1.0,
-"texture": ExtResource("29_aau50")
+"texture": ExtResource("49_6k4rn")
 }, {
 "duration": 1.0,
-"texture": ExtResource("30_2ydeg")
+"texture": ExtResource("50_l3esy")
 }, {
 "duration": 1.0,
-"texture": ExtResource("31_ftqm1")
+"texture": ExtResource("51_kgocv")
 }, {
 "duration": 1.0,
-"texture": ExtResource("32_g56tf")
+"texture": ExtResource("52_0eta2")
 }, {
 "duration": 1.0,
-"texture": ExtResource("33_b5olt")
+"texture": ExtResource("53_f2uhj")
 }, {
 "duration": 1.0,
-"texture": ExtResource("34_ai3o7")
+"texture": ExtResource("54_rp7pv")
 }, {
 "duration": 1.0,
-"texture": ExtResource("35_eth03")
+"texture": ExtResource("55_j86pn")
 }, {
 "duration": 1.0,
-"texture": ExtResource("36_gya28")
+"texture": ExtResource("56_5mu71")
 }, {
 "duration": 1.0,
-"texture": ExtResource("37_ikv5h")
+"texture": ExtResource("57_tnr2t")
 }, {
 "duration": 1.0,
-"texture": ExtResource("38_b2c1x")
+"texture": ExtResource("58_o1veb")
 }, {
 "duration": 1.0,
-"texture": ExtResource("39_w0o21")
+"texture": ExtResource("59_wqbxa")
 }, {
 "duration": 1.0,
-"texture": ExtResource("40_4yjsj")
+"texture": ExtResource("60_gwxdn")
 }],
 "loop": 1,
 "name": &"left",
@@ -329,64 +327,64 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("41_wyd6f")
+"texture": ExtResource("21_ikv5h")
 }, {
 "duration": 1.0,
-"texture": ExtResource("42_nqukw")
+"texture": ExtResource("22_b2c1x")
 }, {
 "duration": 1.0,
-"texture": ExtResource("43_q8y1d")
+"texture": ExtResource("23_w0o21")
 }, {
 "duration": 1.0,
-"texture": ExtResource("44_55goj")
+"texture": ExtResource("24_4yjsj")
 }, {
 "duration": 1.0,
-"texture": ExtResource("45_fdae5")
+"texture": ExtResource("25_wyd6f")
 }, {
 "duration": 1.0,
-"texture": ExtResource("46_mo5yk")
+"texture": ExtResource("26_nqukw")
 }, {
 "duration": 1.0,
-"texture": ExtResource("47_jwj1y")
+"texture": ExtResource("27_q8y1d")
 }, {
 "duration": 1.0,
-"texture": ExtResource("48_exg70")
+"texture": ExtResource("28_55goj")
 }, {
 "duration": 1.0,
-"texture": ExtResource("49_gfkul")
+"texture": ExtResource("29_fdae5")
 }, {
 "duration": 1.0,
-"texture": ExtResource("50_81pxr")
+"texture": ExtResource("30_mo5yk")
 }, {
 "duration": 1.0,
-"texture": ExtResource("51_gisse")
+"texture": ExtResource("31_jwj1y")
 }, {
 "duration": 1.0,
-"texture": ExtResource("52_w0hli")
+"texture": ExtResource("32_exg70")
 }, {
 "duration": 1.0,
-"texture": ExtResource("53_s35cw")
+"texture": ExtResource("33_gfkul")
 }, {
 "duration": 1.0,
-"texture": ExtResource("54_j50e0")
+"texture": ExtResource("34_81pxr")
 }, {
 "duration": 1.0,
-"texture": ExtResource("55_7wpdw")
+"texture": ExtResource("35_gisse")
 }, {
 "duration": 1.0,
-"texture": ExtResource("56_yjcam")
+"texture": ExtResource("36_w0hli")
 }, {
 "duration": 1.0,
-"texture": ExtResource("57_78es8")
+"texture": ExtResource("37_s35cw")
 }, {
 "duration": 1.0,
-"texture": ExtResource("58_j7n1e")
+"texture": ExtResource("38_j50e0")
 }, {
 "duration": 1.0,
-"texture": ExtResource("59_scelf")
+"texture": ExtResource("39_7wpdw")
 }, {
 "duration": 1.0,
-"texture": ExtResource("60_ldkuw")
+"texture": ExtResource("40_yjcam")
 }],
 "loop": 1,
 "name": &"right",
@@ -408,6 +406,11 @@ point_count = 9
 [node name="carfront" type="Node2D" unique_id=1941058003]
 script = ExtResource("1_fcdvi")
 
+[node name="CarfrontPlaceholDr" type="Sprite2D" parent="." unique_id=981950786]
+position = Vector2(579, 450.74997)
+scale = Vector2(1.7808642, 2.3906662)
+texture = ExtResource("1_3lwtp")
+
 [node name="trees" type="AnimatedSprite2D" parent="." unique_id=1442982864]
 position = Vector2(569, 336)
 scale = Vector2(0.6400012, 0.6400012)
@@ -423,11 +426,6 @@ position = Vector2(569, 336)
 scale = Vector2(0.6400012, 0.6400012)
 sprite_frames = SubResource("SpriteFrames_nekx0")
 animation = &"both"
-
-[node name="CarfrontPlaceholDr" type="Sprite2D" parent="." unique_id=981950786]
-position = Vector2(579, 450.74997)
-scale = Vector2(1.7808642, 2.3906662)
-texture = ExtResource("1_3lwtp")
 
 [node name="lookLeft" type="Button" parent="." unique_id=759517212]
 offset_top = 2.0
@@ -460,12 +458,6 @@ offset_right = 708.0
 offset_bottom = 591.0
 text = "EJECT!"
 metadata/_edit_use_anchors_ = true
-
-[node name="spring" type="AudioStreamPlayer2D" parent="eject" unique_id=1248097904]
-stream = ExtResource("3_m0eta")
-
-[node name="explode" type="AudioStreamPlayer2D" parent="eject" unique_id=1568363984]
-stream = ExtResource("4_l404k")
 
 [node name="mobPath1" type="Path2D" parent="." unique_id=1943513510]
 curve = SubResource("Curve2D_0yogx")

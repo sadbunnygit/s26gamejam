@@ -34,6 +34,8 @@ func viewFront():
 	cback.hide()
 	cleft.hide()
 	cright.hide()
+	if (passenger):
+		passenger.hide()
 	
 func viewBack():
 	print_debug()
@@ -41,6 +43,8 @@ func viewBack():
 	cfront.hide()
 	cleft.hide()
 	cright.hide()
+	if (passenger):
+		passenger.show()
 	
 func viewLeft():
 	print_debug()
@@ -48,6 +52,8 @@ func viewLeft():
 	cback.hide()
 	cfront.hide()
 	cright.hide()
+	if (passenger):
+		passenger.hide()
 	
 func viewRight():
 	print_debug()
@@ -55,6 +61,8 @@ func viewRight():
 	cback.hide()
 	cleft.hide()
 	cfront.hide()
+	if (passenger):
+		passenger.hide()
 
 func newPassenger(mob) -> void:
 	print_debug("new passenger: ", mob)
@@ -62,19 +70,33 @@ func newPassenger(mob) -> void:
 	passenger.global_position = $pchair.position
 	hasHuman = (passenger.type == "human")
 	print_debug("human? ", hasHuman)
+	viewBack()
 
 func eject() -> void:
 	print_debug("ejecting", passenger)
 	if passenger == null:
 		return
+	viewBack()
+	if passenger.has_node("dialog"):
+		passenger.get_node("dialog").queue_free()
+	hasHuman = false
+	cback.get_node("eject/springsound").play()
+	cback.get_node("eject/spring").play()
+	await get_tree().create_timer(0.3).timeout
+	eject_ani()
+	await get_tree().create_timer(2).timeout
+	cback.get_node("eject/explosion").play()
+	cback.get_node("eject/explodesound").play()
 	passenger.queue_free()
 	passenger = null
-	hasHuman = false
-	cfront.get_node("eject/spring").play()
-	await get_tree().create_timer(1.5).timeout
-	cfront.get_node("eject/explode").play()
 	
-	
+
+func eject_ani():
+	print_debug("eject ani running")
+	var tween = create_tween()
+	var tar_pos := Vector2(576,-1000)
+	tween.tween_property(passenger, "position", tar_pos, 0.5)
+
 
 
 func lose():

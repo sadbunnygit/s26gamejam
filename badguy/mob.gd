@@ -71,5 +71,6 @@ func enterCar() -> void:
 	# set up different dialogs based on monster type
 	dialog.dialogPath = "res://badguy/dialogs/sample.json"
 	add_child(dialog)
+	dialog.name = "dialog"
 	$Timer.start(-20) #reset
 	dialog.global_position = Vector2(0,0)
