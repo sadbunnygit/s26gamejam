@@ -1,0 +1,43 @@
+{
+    "start": 
+    {
+        "text": "Lost track of the time.",
+        "options": 
+        [
+            {
+                "text": "Do you often do that?",
+                "next": "2"
+        }
+        ]
+    },
+
+    "2": 
+    {
+        "text": "No. Maybe?",
+        "options": 
+        [
+            {
+                "text": "You're not very sure of yourself.",
+                "next": "3"
+            }
+        ]
+    },
+
+    "3": 
+    {
+        "text": "Forgetful.",
+        "options": 
+        [
+            {
+                "text": "And curt.",
+                "next": "end"
+        }
+        ]
+    },
+
+    "end": 
+    {
+        "text": "...",
+        "options": []
+    }
+}

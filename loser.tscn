@@ -1,9 +1,34 @@
 [gd_scene format=3 uid="uid://cpahd4igbl5dc"]
 
-[ext_resource type="Texture2D" uid="uid://3gwhj4f4nddc" path="res://assets/2025-11-02_18.48.04.png" id="1_7j20m"]
+[ext_resource type="Script" uid="uid://bawh4qv7jlan8" path="res://loser.gd" id="1_6xlwr"]
+[ext_resource type="Texture2D" uid="uid://cnrrqwtaonx8d" path="res://assets/images/endings/bad.png" id="1_7j20m"]
+[ext_resource type="Texture2D" uid="uid://cafhl1jfd2e5u" path="res://assets/images/ui/Paper Menu.png" id="3_6kxm5"]
 
 [node name="Node2D" type="Node2D" unique_id=504806119]
+script = ExtResource("1_6xlwr")
 
-[node name="2025110218_48_04" type="Sprite2D" parent="." unique_id=929613106]
-position = Vector2(564, 221)
+[node name="Bad" type="Sprite2D" parent="." unique_id=1819904336]
+position = Vector2(580, 324)
+scale = Vector2(0.61851853, 0.61851853)
 texture = ExtResource("1_7j20m")
+
+[node name="Button" type="Button" parent="." unique_id=684810397]
+offset_left = 13.000061
+offset_top = 27.00003
+offset_right = 809.0
+offset_bottom = 787.0001
+scale = Vector2(0.46874857, 0.16769329)
+icon = ExtResource("3_6kxm5")
+flat = true
+icon_alignment = 1
+
+[node name="Label" type="Label" parent="Button" unique_id=1891129955]
+layout_mode = 0
+offset_left = 198.68146
+offset_top = 202.7511
+offset_right = 257.68146
+offset_bottom = 225.7511
+scale = Vector2(6.6659403, 14.875717)
+text = "Replay?"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -12,18 +12,26 @@ func _ready() -> void:
 	$monster.play()
 	#get_tree().current_scene.print_tree_pretty()
 	main = self.get_parent().get_parent().get_parent().get_parent()# should make it to main
-	$AnimatedSprite2D.animation = type
-	if type == "human":
+	var ani = Global.HUMAN
+	while (ani == Global.HUMAN && type == "monster_0"):
+		ani = ["Dmon", "Mmon","Smon","Vmon"].pick_random()
+	while (ani == Global.HUMAN && type == "monster_1"):
+		ani = ["Dmon", "Mmon","Smon","Vmon","Danelle", "Meghan","Sandy","Vicki"].pick_random()
+	while (ani == Global.HUMAN && type == "monster_2"):
+		ani = ["Dmon", "Mmon","Smon","Vmon","Danelle", "Meghan","Sandy","Vicki"].pick_random()
+	while (ani == Global.HUMAN && type == "monster_3"):
+		ani = ["Danelle", "Meghan","Sandy","Vicki"].pick_random()
+	if type == Global.HUMAN:
 		print_debug("human entered!")
-		#$AudioStreamPlayer2D.play()
-		$AnimatedSprite2D.animation = Global.HUMAN
+		ani = Global.HUMAN
+	$AnimatedSprite2D.animation = ani
 	$AnimatedSprite2D.play()
-	$Timer.start()
+	$Timer.start(20)
 	
 
 func _on_timer_timeout() -> void:
 	print_debug("timer timeout")
-	if type == "human":
+	if type == Global.HUMAN:
 		return
 	print_debug("monster kills")
 	main.lose()
@@ -35,11 +43,23 @@ func _on_control_gui_input(event: InputEvent) -> void:
 			print_debug("I've been left clicked D:")
 			already_clicked = true
 			print_debug("starting interaction options")
+			var dialog = dialogue.instantiate()
+			# set up different dialogs based on monster type
+			if (Global.firstmob):
+				print_debug("first mob so dialog at start")
+				Global.firstmob = false
+				dialog.dialogPath = "res://badguy/dialogs/first.json"
+				add_child(dialog)
+				dialog.name = "dialog"
+				dialog.mob = self
+				$Timer.stop() #reset
+				dialog.global_position = Vector2(0,0)
+				return
 			var i = interact.instantiate()
 			add_child(i)
 			print_debug("self.position: ", self.position.x, ", ", self.position.y)
 			print_debug("self.global_position: ", self.global_position.x, ", ", self.global_position.y)
-			i.position = Vector2(-100,-25)
+			i.position = Vector2(-100,-10)
 			i.mob = self
 			i.name = "interact"
 	
@@ -62,6 +82,8 @@ func enterCar() -> void:
 		get_node("interact").queue_free()
 	if has_node("Control"):
 		get_node("Control").queue_free()
+	if has_node("dialog"):
+		get_node("dialog").queue_free()
 	#print(self)
 	#get_tree().current_scene.print_tree_pretty()
 	reparent(main) 
@@ -69,8 +91,19 @@ func enterCar() -> void:
 	main.newPassenger(self)
 	var dialog = dialogue.instantiate()
 	# set up different dialogs based on monster type
-	dialog.dialogPath = "res://badguy/dialogs/sample.json"
+	if (type == Global.HUMAN):
+		dialog.dialogPath = "res://badguy/dialogs/good.json"
+	else:
+		var ran = randi_range(1,5)
+		if (ran == 1):
+			dialog.dialogPath = "res://badguy/dialogs/bad1.json"
+		elif (ran == 2):
+			dialog.dialogPath = "res://badguy/dialogs/bad2.json"
+		elif (ran >= 3):
+			dialog.dialogPath = "res://badguy/dialogs/neu1.json"
+	dialog.mob = self
 	add_child(dialog)
+	dialog.mob = self
 	dialog.name = "dialog"
-	$Timer.start(-20) #reset
+	$Timer.stop() 
 	dialog.global_position = Vector2(0,0)

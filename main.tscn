@@ -5,6 +5,10 @@
 [ext_resource type="PackedScene" uid="uid://c5dkdcoerkbje" path="res://car/carback/carback.tscn" id="3_lquwl"]
 [ext_resource type="PackedScene" uid="uid://bx7thw5wkefxn" path="res://car/carleft/carleft.tscn" id="4_7mycd"]
 [ext_resource type="PackedScene" uid="uid://bsslfckg7pp6w" path="res://car/carright/carright.tscn" id="5_272bh"]
+[ext_resource type="AudioStream" uid="uid://dx8351ep0n57o" path="res://assets/audio/background/scary1.mp3" id="6_5vw27"]
+[ext_resource type="AudioStream" uid="uid://cmsjduslq76lo" path="res://assets/audio/background/scary2.mp3" id="7_kek77"]
+[ext_resource type="AudioStream" uid="uid://dwjwdkxtylgr0" path="res://assets/audio/background/scary3.mp3" id="8_4c57u"]
+[ext_resource type="AudioStream" uid="uid://m7eqn2s0mdpn" path="res://assets/audio/background/bgmusic.mp3" id="9_kek77"]
 
 [node name="main" type="Node2D" unique_id=280540536]
 script = ExtResource("1_0xm2m")
@@ -21,8 +25,27 @@ wait_time = 20.0
 autostart = true
 
 [node name="gameTimer" type="Timer" parent="." unique_id=765436028]
-wait_time = 64.0
+wait_time = 45.0
 autostart = true
+
+[node name="soundTimer" type="Timer" parent="." unique_id=1149333226]
+wait_time = 4.5
+autostart = true
+
+[node name="scary3" type="AudioStreamPlayer" parent="soundTimer" unique_id=507466585]
+stream = ExtResource("8_4c57u")
+
+[node name="scary2" type="AudioStreamPlayer" parent="soundTimer" unique_id=894153843]
+stream = ExtResource("7_kek77")
+
+[node name="scary1" type="AudioStreamPlayer" parent="soundTimer" unique_id=616303711]
+stream = ExtResource("6_5vw27")
+
+[node name="music" type="AudioStreamPlayer" parent="." unique_id=407217376]
+stream = ExtResource("9_kek77")
+autoplay = true
+parameters/looping = true
 
 [connection signal="timeout" from="spawnTimer" to="." method="_on_spawntimer_timeout"]
 [connection signal="timeout" from="gameTimer" to="." method="_on_gametimer_timeout"]
+[connection signal="timeout" from="soundTimer" to="." method="_on_sound_timer_timeout"]

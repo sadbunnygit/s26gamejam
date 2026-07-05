@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://bjdxe7epowt3l" path="res://assets/animations/side trees animation/trees side_0004.png" id="6_p8a40"]
 [ext_resource type="Texture2D" uid="uid://1vudvm4pae7j" path="res://assets/animations/side trees animation/trees side_0005.png" id="7_diqhs"]
 [ext_resource type="Texture2D" uid="uid://bdejmfra5oui1" path="res://assets/images/car side bg.png" id="8_8nw1u"]
+[ext_resource type="Texture2D" uid="uid://svrk7kc3g1si" path="res://assets/images/ui/Arrow.png" id="9_kpsvt"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_nh3q5"]
 animations = [{
@@ -56,7 +57,7 @@ script = ExtResource("1_tfxng")
 position = Vector2(574.88885, 324.49997)
 scale = Vector2(0.6009259, 0.6009259)
 sprite_frames = SubResource("SpriteFrames_nh3q5")
-frame_progress = 0.89358056
+frame_progress = 0.8702717
 
 [node name="CarSideBg" type="Sprite2D" parent="." unique_id=2010433583]
 position = Vector2(632.8889, 340)
@@ -64,11 +65,16 @@ scale = Vector2(0.65925926, 0.65925926)
 texture = ExtResource("8_8nw1u")
 
 [node name="lookFront" type="Button" parent="." unique_id=1299905443]
-offset_left = 906.0
-offset_top = -2.0
+offset_left = 973.0
+offset_top = 242.0
 offset_right = 1150.0
-offset_bottom = 667.0
-text = "Turn Right (Back to front)"
+offset_bottom = 386.0
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="lookFront" unique_id=361482952]
+position = Vector2(82, 76)
+rotation = -4.712736
+texture = ExtResource("9_kpsvt")
 
 [node name="mobPath1" type="Path2D" parent="." unique_id=2087048534]
 position = Vector2(425, 311)

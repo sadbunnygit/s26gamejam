@@ -1,0 +1,39 @@
+{
+	"start": 
+	{
+		"text": "I was doing what every human would do in the woods.",
+		"options": 
+		[
+			{
+				"text": "... Which is?",
+				"next": "silence"
+			}
+		]
+	},
+
+	"silence": 
+	{
+		"text": "...",
+		"options": [
+			{
+				"text": "... Hello?",
+				"next": "answer"
+			}
+		]
+	},
+	"answer": 
+	{
+		"text": "Hungry...",
+		"options": [
+			{
+				"text": "What.",
+				"next": "kill"
+			}
+		]
+	},
+	"kill": 
+	{
+		"text": "HUNGRY.",
+		"options": []
+	}
+}

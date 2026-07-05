@@ -1,0 +1,39 @@
+{
+    "start":
+    {
+        "text": "I got lost on the trail and before I knew it, the sun was down.\n Eventually, I managed to find a road and just hoped that I'd find another person before… Well before something else got to me.",
+        "options": 
+        [
+            {
+                "text": "Mm, you never know nowadays. Even encountered one before I found you.",
+                "next": "2"
+            }
+        ]
+    },
+
+    "2": {
+        "text": "That's rough. I wonder how those 'creature' even appear in the first place.",
+        "options": [
+        {
+            "text": "Still being studied it seems. Otherwise, there's no clue how or why they even show up.",
+            "next": "3"
+        }
+        ]
+    },
+
+    "3": {
+        "text": "P: Man, it's already been so long since the world became like this and yet nothing? What are they even doing at this point?",
+        "options": [
+        {
+            "text": "At least not all of them are malicious.",
+            "next": "end"
+        }
+        ]
+    },
+
+    "end": 
+    {
+        "text": "P: Hah, I guess that's the silver lining. They're really more of a nuisance than anything.",
+        "options": []
+    }
+}

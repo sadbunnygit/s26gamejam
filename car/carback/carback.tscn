@@ -50,6 +50,9 @@
 [ext_resource type="Texture2D" uid="uid://bdkk18jf720rb" path="res://assets/animations/backseat/explosion/explosion_0014.png" id="46_y4377"]
 [ext_resource type="AudioStream" uid="uid://0f7c8vul4uhr" path="res://assets/audio/universfield-spring-boing-229170.mp3" id="47_tb565"]
 [ext_resource type="AudioStream" uid="uid://c5g5wmns1nud3" path="res://assets/audio/u_b32baquv5u-explosion-9-340460.mp3" id="48_bank8"]
+[ext_resource type="Texture2D" uid="uid://svrk7kc3g1si" path="res://assets/images/ui/Arrow.png" id="49_3g6gb"]
+[ext_resource type="Texture2D" uid="uid://c43sv1x0eetcw" path="res://assets/images/car backseat roof.png" id="51_bdgc1"]
+[ext_resource type="Texture2D" uid="uid://c1e7vgvme76cw" path="res://assets/images/car backseat.png" id="52_xhpfu"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_87jk0"]
 animations = [{
@@ -76,6 +79,18 @@ animations = [{
 "name": &"default",
 "speed": 5.0
 }]
+
+[sub_resource type="Curve2D" id="Curve2D_nhab5"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 221, 7, 0, 0, 0, 0, 186, 31, 0, 0, 0, 0, 179, 76, 0, 0, 0, 0, 216, 104, 0, 0, 0, 0, 224, 139, 0, 0, 0, 0, 205, 205, 0, 0, 0, 0, 79, 286, 0, 0, 0, 0, 74, 361, 0, 0, 0, 0, 53, 439)
+}
+point_count = 9
+
+[sub_resource type="Curve2D" id="Curve2D_bdgc1"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 378, 140, 0, 0, 0, 0, 540, 182, 0, 0, 0, 0, 651, 214, 0, 0, 0, 0, 826, 158, 0, 0, 0, 0, 991, 180, 0, 0, 0, 0, 1114, 255, 0, 0, 0, 0, 1122, 296, 0, 0, 0, 0, 1124, 397)
+}
+point_count = 8
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hwc66"]
 animations = [{
@@ -210,12 +225,6 @@ animations = [{
 "speed": 8.0
 }]
 
-[sub_resource type="Curve2D" id="Curve2D_nhab5"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, 221, 7, 0, 0, 0, 0, 186, 31, 0, 0, 0, 0, 179, 76, 0, 0, 0, 0, 216, 104, 0, 0, 0, 0, 224, 139, 0, 0, 0, 0, 205, 205, 0, 0, 0, 0, 226, 268, 0, 0, 0, 0, 278, 300, 0, 0, 0, 0, 374, 303, 0, 0, 0, 0, 401, 375, 0, 0, 0, 0, 386, 421, 0, 0, 0, 0, 349, 432, 0, 0, 0, 0, 270, 510)
-}
-point_count = 13
-
 [node name="carback" type="Node2D" unique_id=115809439]
 script = ExtResource("1_iuw5m")
 
@@ -223,13 +232,36 @@ script = ExtResource("1_iuw5m")
 position = Vector2(581.44446, 319.49997)
 scale = Vector2(0.612037, 0.61203706)
 sprite_frames = SubResource("SpriteFrames_87jk0")
-frame_progress = 0.7152324
+frame_progress = 0.96858096
+
+[node name="mobPath1" type="Path2D" parent="." unique_id=1917408888]
+position = Vector2(0, 1)
+curve = SubResource("Curve2D_nhab5")
+
+[node name="mobLoc" type="PathFollow2D" parent="mobPath1" unique_id=31177118]
+position = Vector2(221, 7)
+rotates = false
+loop = false
+script = ExtResource("2_jaimd")
+mob_scene = ExtResource("3_4kgja")
+
+[node name="mobPath2" type="Path2D" parent="." unique_id=2147168288]
+position = Vector2(0, 1)
+curve = SubResource("Curve2D_bdgc1")
+
+[node name="mobLoc" type="PathFollow2D" parent="mobPath2" unique_id=1948412491]
+position = Vector2(378, 140)
+rotates = false
+loop = false
+script = ExtResource("2_jaimd")
+mob_scene = ExtResource("3_4kgja")
 
 [node name="eject" type="Node2D" parent="." unique_id=1339484597]
 position = Vector2(581.44446, 319.49997)
 scale = Vector2(0.612037, 0.61203706)
 
 [node name="spring" type="AnimatedSprite2D" parent="eject" unique_id=773926190]
+z_index = 3
 sprite_frames = SubResource("SpriteFrames_hwc66")
 frame = 23
 frame_progress = 1.0
@@ -243,22 +275,26 @@ stream = ExtResource("47_tb565")
 [node name="explodesound" type="AudioStreamPlayer2D" parent="eject" unique_id=1402212945]
 stream = ExtResource("48_bank8")
 
+[node name="CarBackseatRoof" type="Sprite2D" parent="." unique_id=1552174559]
+position = Vector2(584, 323)
+scale = Vector2(0.61, 0.61)
+texture = ExtResource("51_bdgc1")
+
+[node name="CarBackseat" type="Sprite2D" parent="." unique_id=123396339]
+position = Vector2(584, 323)
+scale = Vector2(0.6101852, 0.6101852)
+texture = ExtResource("52_xhpfu")
+
 [node name="lookFront" type="Button" parent="." unique_id=1299905443]
-offset_left = 340.0
-offset_top = 7.0
-offset_right = 814.0
-offset_bottom = 190.0
-text = "Turn Back to front"
+offset_left = 498.0
+offset_top = -13.0
+offset_right = 688.0
+offset_bottom = 153.0
+flat = true
 
-[node name="mobPath1" type="Path2D" parent="." unique_id=1917408888]
-position = Vector2(0, 1)
-curve = SubResource("Curve2D_nhab5")
-
-[node name="mobLoc" type="PathFollow2D" parent="mobPath1" unique_id=31177118]
-position = Vector2(221, 7)
-rotates = false
-loop = false
-script = ExtResource("2_jaimd")
-mob_scene = ExtResource("3_4kgja")
+[node name="Sprite2D" type="Sprite2D" parent="lookFront" unique_id=87805098]
+position = Vector2(95, 94)
+rotation = -0.027330041
+texture = ExtResource("49_3g6gb")
 
 [connection signal="pressed" from="lookFront" to="." method="_on_look_front_pressed"]

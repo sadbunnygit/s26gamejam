@@ -9,7 +9,7 @@ func _ready() -> void:
 
 
 func spawn_mob(type : String, speed : float = 1):
-	var path = randi_range(1, 1)
+	var path = randi_range(1, 2)
 	print_debug("Spawning mob from back path %d" % path)
 	get_node("mobPath%d/mobLoc" % path).spawn_mob(type, speed)		
 		

@@ -8,8 +8,8 @@ func _ready() -> void:
 	$trees.play()
 
 func spawn_mob(type : String, speed : float = 1):
-	var path = randi_range(1, 6)
-	print_debug("Spawning mob from rught path %d" % path)
+	var path = randi_range(1, 2)
+	print_debug("Spawning mob from right path %d" % path)
 	get_node("mobPath%d/mobLoc" % path).spawn_mob(type, speed)		
 		
 func _on_look_front_pressed() -> void:

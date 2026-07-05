@@ -1,0 +1,75 @@
+{
+    "start": 
+    {
+        "text": "Hello, let me in.",
+        "options": 
+        [
+            {
+                "text": "Are you the one who sent the distress signal?",
+                "next": "no_signal"
+            }
+        ]
+    },
+
+    "no_signal": 
+    {
+        "text": "No.",
+        "options": [
+        {
+            "text": "Then why would I let you in.",
+            "next": "let_me_in"
+        }
+        ]
+    },
+
+    "let_me_in": 
+    {
+        "text": "Let me in.",
+        "options": [
+        {
+            "text": "Maybe if you say 'please'.",
+            "next": "please"
+        }
+        ]
+    },
+
+    "please": 
+    {
+        "text": "Please.",
+        "options": 
+        [
+        {
+            "text": "No, get away.",
+            "next": "getaway"
+        },
+        {
+            "text": "Alright, get in.",
+            "next": "letin"
+        }
+        ]
+    },
+
+    "getaway": 
+    {
+        "text": ":(",
+        "options": []
+    },
+
+    "letin": 
+    {
+        "text": "",
+        "options": 
+        [
+            {
+                "text": "So… Why were you in the woods?",
+                "next": "end"
+            }
+        ]
+    },
+
+    "end": 
+    {
+        "text": "",
+        "options": []
+    }
+}

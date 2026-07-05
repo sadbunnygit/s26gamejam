@@ -1,0 +1,30 @@
+{
+	"start": 
+	{
+		"text": "I was doing what every human would do in the woods.",
+		"options": 
+		[
+			{
+				"text": "... Which is?",
+				"next": "answer"
+			}
+		]
+	},
+
+	"answer": 
+	{
+		"text": "Run. Walk. Eat leaves.",
+		"options": [
+			{
+				"text": "... Okay…",
+				"next": "kill"
+			}
+		]
+	},
+
+	"kill": 
+	{
+		"text": "...",
+		"options": []
+	}
+}

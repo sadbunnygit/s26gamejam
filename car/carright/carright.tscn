@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://bjdxe7epowt3l" path="res://assets/animations/side trees animation/trees side_0004.png" id="6_rfwpa"]
 [ext_resource type="Texture2D" uid="uid://1vudvm4pae7j" path="res://assets/animations/side trees animation/trees side_0005.png" id="7_g1l8g"]
 [ext_resource type="Texture2D" uid="uid://bdejmfra5oui1" path="res://assets/images/car side bg.png" id="8_frf2a"]
+[ext_resource type="Texture2D" uid="uid://svrk7kc3g1si" path="res://assets/images/ui/Arrow.png" id="9_vqp5x"]
 [ext_resource type="Texture2D" uid="uid://doagm7jkl5qvl" path="res://assets/images/side chair.png" id="11_xshcy"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_87jk0"]
@@ -57,7 +58,7 @@ script = ExtResource("1_1q0m0")
 position = Vector2(574.88885, 323.49997)
 scale = Vector2(0.6009259, 0.6009259)
 sprite_frames = SubResource("SpriteFrames_87jk0")
-frame_progress = 0.6327829
+frame_progress = 0.9667834
 
 [node name="CarSideBg" type="Sprite2D" parent="." unique_id=688590879]
 position = Vector2(578, 315.50003)
@@ -66,11 +67,16 @@ texture = ExtResource("8_frf2a")
 flip_h = true
 
 [node name="lookFront" type="Button" parent="." unique_id=619350525]
-offset_left = 9.0
-offset_top = -4.0
-offset_right = 253.0
-offset_bottom = 665.0
-text = "Turn Left (Back to front)"
+offset_left = -1.0
+offset_top = 235.0
+offset_right = 175.0
+offset_bottom = 420.0
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="lookFront" unique_id=966179319]
+position = Vector2(95, 90)
+rotation = -1.5803549
+texture = ExtResource("9_vqp5x")
 
 [node name="mobPath1" type="Path2D" parent="." unique_id=1003134964]
 position = Vector2(425, 311)

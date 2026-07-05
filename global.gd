@@ -1,6 +1,7 @@
 extends Node
 
 var HUMAN  : String
+var firstmob = true
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -13,3 +14,4 @@ func _ready() -> void:
 		HUMAN =  "Sandy"
 	elif (who == 4):
 		HUMAN =  "Vicki"
+	

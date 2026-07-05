@@ -1,14 +1,22 @@
 [gd_scene format=3 uid="uid://skpwy4scnbr7"]
 
 [ext_resource type="Script" uid="uid://dtfxxydf2mko1" path="res://badguy/dialogue.gd" id="1_ygpx7"]
+[ext_resource type="Texture2D" uid="uid://cg3dqml3kjkxm" path="res://assets/images/ui/Dialogue Box.png" id="2_adgiv"]
 
 [node name="Dialogue" type="Control" unique_id=1768575878]
+z_index = 10
+z_as_relative = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -339.0
+offset_top = -369.0
+offset_right = -339.0
+offset_bottom = -369.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(1.6000001, 1.6000001)
 script = ExtResource("1_ygpx7")
 
 [node name="box" type="ColorRect" parent="." unique_id=1880425344]
@@ -17,34 +25,42 @@ offset_left = 320.0
 offset_top = 512.0
 offset_right = 832.0
 offset_bottom = 649.0
-color = Color(0.30980393, 0.23529412, 0.44705883, 1)
+color = Color(0.30980393, 0.23529412, 0.44705883, 0)
+
+[node name="DialogueBox" type="Sprite2D" parent="box" unique_id=198511997]
+position = Vector2(247.49992, -85.12503)
+scale = Vector2(0.45374998, 0.45374998)
+texture = ExtResource("2_adgiv")
 
 [node name="mobLine" type="Label" parent="box" unique_id=1181068556]
-modulate = Color(0.28138337, 0, 0.05249364, 1)
+modulate = Color(0.9999799, 0.51223606, 0.52863336, 1)
 custom_maximum_size = Vector2(512, 64)
 layout_mode = 0
-offset_left = 3.0
-offset_top = 3.0
-offset_right = 510.0
-offset_bottom = 67.0
+offset_left = -85.62503
+offset_top = -2.0000377
+offset_right = 426.37497
+offset_bottom = 61.99996
 text = "this is the text box where the monster dialogue is going to go. "
 autowrap_mode = 3
 autowrap_trim_flags = 128
 
 [node name="option1" type="Button" parent="box" unique_id=98038334]
 layout_mode = 0
-offset_top = 71.0
-offset_right = 256.0
-offset_bottom = 135.0
+offset_left = -83.12503
+offset_top = 54.87497
+offset_right = 253.74994
+offset_bottom = 108.87497
 text = "option 1"
+autowrap_mode = 3
 
 [node name="option2" type="Button" parent="box" unique_id=829849309]
 layout_mode = 0
-offset_left = 256.0
-offset_top = 71.0
-offset_right = 512.0
-offset_bottom = 135.0
+offset_left = 257.49994
+offset_top = 51.749954
+offset_right = 588.7499
+offset_bottom = 105.749954
 text = "option 2"
+autowrap_mode = 3
 
 [connection signal="pressed" from="box/option1" to="." method="_on_option_1"]
 [connection signal="pressed" from="box/option2" to="." method="_on_option_2"]

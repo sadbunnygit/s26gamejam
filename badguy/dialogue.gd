@@ -3,6 +3,7 @@ extends Control
 var timeline = {}
 var current_node = "start"
 var dialogPath
+var mob = null
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -16,9 +17,33 @@ func load_timeline(path):
 	return timeline
 
 func _on_option_1() -> void:
+	if timeline[current_node]["options"][0]["next"] == "getaway":
+		mob.leave()
+		queue_free()
+		return
+	if timeline[current_node]["options"][0]["next"] == "letin":
+		mob.enterCar()
+		queue_free()
+		return
+	if timeline[current_node]["options"][0]["next"] == "kill":
+		mob._on_timer_timeout()
+		queue_free()
+		return
 	show_node(timeline[current_node]["options"][0]["next"])
 
 func _on_option_2() -> void:
+	if timeline[current_node]["options"][1]["next"] == "getaway":
+		mob.leave()
+		queue_free()
+		return
+	if timeline[current_node]["options"][1]["next"] == "letin":
+		mob.enterCar()
+		queue_free()
+		return
+	if timeline[current_node]["options"][1]["next"] == "kill":
+		mob._on_timer_timeout()
+		queue_free()
+		return
 	show_node(timeline[current_node]["options"][1]["next"])
 
 func show_node(id):
