@@ -10,21 +10,22 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -339.0
-offset_top = -369.0
-offset_right = -339.0
-offset_bottom = -369.0
+offset_left = -4.0
+offset_top = 4.0
+offset_right = -4.0
+offset_bottom = 4.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(1.6000001, 1.6000001)
+scale = Vector2(1.0000006, 1.0000006)
 script = ExtResource("1_ygpx7")
 
 [node name="box" type="ColorRect" parent="." unique_id=1880425344]
 layout_mode = 0
-offset_left = 320.0
-offset_top = 512.0
-offset_right = 832.0
-offset_bottom = 649.0
+offset_left = 166.99988
+offset_top = 453.99973
+offset_right = 678.9999
+offset_bottom = 590.99976
+scale = Vector2(1.6400008, 1.6400008)
 color = Color(0.30980393, 0.23529412, 0.44705883, 0)
 
 [node name="DialogueBox" type="Sprite2D" parent="box" unique_id=198511997]

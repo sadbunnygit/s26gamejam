@@ -59,7 +59,7 @@ func _on_control_gui_input(event: InputEvent) -> void:
 			add_child(i)
 			print_debug("self.position: ", self.position.x, ", ", self.position.y)
 			print_debug("self.global_position: ", self.global_position.x, ", ", self.global_position.y)
-			i.position = Vector2(-100,-10)
+			i.position = Vector2(-100,-25)
 			i.mob = self
 			i.name = "interact"
 	

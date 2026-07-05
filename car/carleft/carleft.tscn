@@ -59,23 +59,6 @@ scale = Vector2(0.6009259, 0.6009259)
 sprite_frames = SubResource("SpriteFrames_nh3q5")
 frame_progress = 0.8702717
 
-[node name="CarSideBg" type="Sprite2D" parent="." unique_id=2010433583]
-position = Vector2(632.8889, 340)
-scale = Vector2(0.65925926, 0.65925926)
-texture = ExtResource("8_8nw1u")
-
-[node name="lookFront" type="Button" parent="." unique_id=1299905443]
-offset_left = 973.0
-offset_top = 242.0
-offset_right = 1150.0
-offset_bottom = 386.0
-flat = true
-
-[node name="Sprite2D" type="Sprite2D" parent="lookFront" unique_id=361482952]
-position = Vector2(82, 76)
-rotation = -4.712736
-texture = ExtResource("9_kpsvt")
-
 [node name="mobPath1" type="Path2D" parent="." unique_id=2087048534]
 position = Vector2(425, 311)
 curve = SubResource("Curve2D_hnajx")
@@ -96,5 +79,22 @@ rotates = false
 loop = false
 script = ExtResource("2_y3lde")
 mob_scene = ExtResource("3_cimb5")
+
+[node name="CarSideBg" type="Sprite2D" parent="." unique_id=2010433583]
+position = Vector2(632.8889, 340)
+scale = Vector2(0.65925926, 0.65925926)
+texture = ExtResource("8_8nw1u")
+
+[node name="lookFront" type="Button" parent="." unique_id=1299905443]
+offset_left = 973.0
+offset_top = 242.0
+offset_right = 1150.0
+offset_bottom = 386.0
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="lookFront" unique_id=361482952]
+position = Vector2(82, 76)
+rotation = -4.712736
+texture = ExtResource("9_kpsvt")
 
 [connection signal="pressed" from="lookFront" to="." method="_on_look_front_pressed"]

@@ -60,24 +60,6 @@ scale = Vector2(0.6009259, 0.6009259)
 sprite_frames = SubResource("SpriteFrames_87jk0")
 frame_progress = 0.9667834
 
-[node name="CarSideBg" type="Sprite2D" parent="." unique_id=688590879]
-position = Vector2(578, 315.50003)
-scale = Vector2(0.5979166, 0.6175926)
-texture = ExtResource("8_frf2a")
-flip_h = true
-
-[node name="lookFront" type="Button" parent="." unique_id=619350525]
-offset_left = -1.0
-offset_top = 235.0
-offset_right = 175.0
-offset_bottom = 420.0
-flat = true
-
-[node name="Sprite2D" type="Sprite2D" parent="lookFront" unique_id=966179319]
-position = Vector2(95, 90)
-rotation = -1.5803549
-texture = ExtResource("9_vqp5x")
-
 [node name="mobPath1" type="Path2D" parent="." unique_id=1003134964]
 position = Vector2(425, 311)
 curve = SubResource("Curve2D_y55lq")
@@ -99,10 +81,28 @@ loop = false
 script = ExtResource("2_4sksy")
 mob_scene = ExtResource("3_sm2rh")
 
+[node name="CarSideBg" type="Sprite2D" parent="." unique_id=688590879]
+position = Vector2(578, 315.50003)
+scale = Vector2(0.5979166, 0.6175926)
+texture = ExtResource("8_frf2a")
+flip_h = true
+
 [node name="SideChair" type="Sprite2D" parent="." unique_id=106542232]
 position = Vector2(569.55554, 320.75003)
 scale = Vector2(0.6069445, 0.6069445)
 texture = ExtResource("11_xshcy")
 flip_h = true
+
+[node name="lookFront" type="Button" parent="." unique_id=619350525]
+offset_left = -1.0
+offset_top = 235.0
+offset_right = 175.0
+offset_bottom = 420.0
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="lookFront" unique_id=966179319]
+position = Vector2(95, 90)
+rotation = -1.5803549
+texture = ExtResource("9_vqp5x")
 
 [connection signal="pressed" from="lookFront" to="." method="_on_look_front_pressed"]
