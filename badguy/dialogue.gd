@@ -46,7 +46,7 @@ func show_node(id):
 	$box/option2.hide()
 	if node["options"].size() <= 0:
 		await get_tree().create_timer(2).timeout
-		if (dialogPath == "res://badguy/dialogs/neu1.json"):
+		if (dialogPath == "res://badguy/dialogs/bad1.json" || dialogPath == "res://badguy/dialogs/bad2.json"):
 			mob.restartTime()
 		queue_free()
 	if node["options"].size() > 0:

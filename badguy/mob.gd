@@ -34,7 +34,13 @@ func _on_timer_timeout() -> void:
 	if type == Global.HUMAN:
 		return
 	print_debug("monster kills")
+	jumpscare()
 	main.lose()
+
+func jumpscare():
+	reparent(main) 
+	self.global_position = $pchair.position
+	self.scale = Vector2(3,3)
 
 func restartTime() -> void:
 	$Timer.start(0)

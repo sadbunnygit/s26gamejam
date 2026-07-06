@@ -57,7 +57,7 @@ script = ExtResource("1_tfxng")
 position = Vector2(574.88885, 324.49997)
 scale = Vector2(0.6009259, 0.6009259)
 sprite_frames = SubResource("SpriteFrames_nh3q5")
-frame_progress = 0.8702717
+frame_progress = 0.3253845
 
 [node name="mobPath1" type="Path2D" parent="." unique_id=2087048534]
 position = Vector2(425, 311)
