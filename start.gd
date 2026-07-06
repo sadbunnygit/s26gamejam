@@ -7,6 +7,7 @@ func _on_button_pressed() -> void:
 	
 func _ready() -> void:
 	print_debug("NEW START LOADED")
+	Global._ready()
 	$music.play()
 	$krobusChain.animation = "default"
 	$krobusChain.play()

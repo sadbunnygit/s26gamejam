@@ -100,7 +100,7 @@ func enterCar() -> void:
 	if (type == Global.HUMAN):
 		dialog.dialogPath = "res://badguy/dialogs/good.json"
 	else:
-		var ran = randi_range(1,5)
+		var ran = randi_range(1,4)
 		if (ran == 1):
 			dialog.dialogPath = "res://badguy/dialogs/bad1.json"
 		elif (ran == 2):

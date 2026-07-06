@@ -94,42 +94,6 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="Curve2D" id="Curve2D_0yogx"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, 1058, 70, 0, 0, 0, 0, 913, 94, 0, 0, 0, 0, 823, 135, 0, 0, 0, 0, 779, 183, 0, 0, 0, 0, 779, 225, 0, 0, 0, 0, 783, 266, 0, 0, 0, 0, 754, 301, 0, 0, 0, 0, 717, 331, 0, 0, 0, 0, 626, 353)
-}
-point_count = 9
-
-[sub_resource type="Curve2D" id="Curve2D_yn5v8"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, 93, 70, 0, 0, 0, 0, 157, 81, 0, 0, 0, 0, 196, 155, 0, 0, 0, 0, 274, 164, 0, 0, 0, 0, 323, 139, 0, 0, 0, 0, 396, 177, 0, 0, 0, 0, 443, 232, 0, 0, 0, 0, 534, 289, 0, 0, 0, 0, 575, 326)
-}
-point_count = 9
-
-[sub_resource type="Curve2D" id="Curve2D_lorjv"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, 343, 66, 0, 0, 0, 0, 421, 93, 0, 0, 0, 0, 471, 123, 0, 0, 0, 0, 531, 152, 0, 0, 0, 0, 539, 189, 0, 0, 0, 0, 612, 324)
-}
-point_count = 6
-
-[sub_resource type="Curve2D" id="Curve2D_4cw4t"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, 838, 48, 0, 0, 0, 0, 754, 87, 0, 0, 0, 0, 722, 183, 0, 0, 0, 0, 341, 214, 0, 0, 0, 0, 293, 374)
-}
-point_count = 5
-
-[sub_resource type="Curve2D" id="Curve2D_yre8u"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, 883, 53, 0, 0, 0, 0, 899, 132, 0, 0, 0, 0, 916, 215, 0, 0, 0, 0, 930, 366)
-}
-point_count = 4
-
-[sub_resource type="Curve2D" id="Curve2D_5seur"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, 434, 59, 0, 0, 0, 0, 371, 120, 0, 0, 0, 0, 282, 110, 0, 0, 0, 0, 174, 142, 0, 0, 0, 0, 164, 200, 0, 0, 0, 0, 199, 380)
-}
-point_count = 6
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_87jk0"]
 animations = [{
 "frames": [{
@@ -173,6 +137,42 @@ animations = [{
 "name": &"default",
 "speed": 8.0
 }]
+
+[sub_resource type="Curve2D" id="Curve2D_0yogx"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1058, 70, 0, 0, 0, 0, 913, 94, 0, 0, 0, 0, 823, 135, 0, 0, 0, 0, 779, 183, 0, 0, 0, 0, 779, 225, 0, 0, 0, 0, 783, 266, 0, 0, 0, 0, 754, 301, 0, 0, 0, 0, 717, 331, 0, 0, 0, 0, 626, 353)
+}
+point_count = 9
+
+[sub_resource type="Curve2D" id="Curve2D_yn5v8"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 93, 70, 0, 0, 0, 0, 157, 81, 0, 0, 0, 0, 196, 155, 0, 0, 0, 0, 274, 164, 0, 0, 0, 0, 323, 139, 0, 0, 0, 0, 396, 177, 0, 0, 0, 0, 443, 232, 0, 0, 0, 0, 534, 289, 0, 0, 0, 0, 575, 326)
+}
+point_count = 9
+
+[sub_resource type="Curve2D" id="Curve2D_lorjv"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 343, 66, 0, 0, 0, 0, 421, 93, 0, 0, 0, 0, 471, 123, 0, 0, 0, 0, 531, 152, 0, 0, 0, 0, 539, 189, 0, 0, 0, 0, 612, 324)
+}
+point_count = 6
+
+[sub_resource type="Curve2D" id="Curve2D_4cw4t"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 838, 48, 0, 0, 0, 0, 754, 87, 0, 0, 0, 0, 722, 183, 0, 0, 0, 0, 341, 214, 0, 0, 0, 0, 293, 374)
+}
+point_count = 5
+
+[sub_resource type="Curve2D" id="Curve2D_yre8u"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 883, 53, 0, 0, 0, 0, 899, 132, 0, 0, 0, 0, 916, 215, 0, 0, 0, 0, 930, 366)
+}
+point_count = 4
+
+[sub_resource type="Curve2D" id="Curve2D_5seur"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 434, 59, 0, 0, 0, 0, 371, 120, 0, 0, 0, 0, 282, 110, 0, 0, 0, 0, 174, 142, 0, 0, 0, 0, 164, 200, 0, 0, 0, 0, 199, 380)
+}
+point_count = 6
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_nekx0"]
 animations = [{
@@ -440,6 +440,12 @@ position = Vector2(569, 336)
 scale = Vector2(0.6400012, 0.6400012)
 sprite_frames = SubResource("SpriteFrames_hwc66")
 
+[node name="krobusChain" type="AnimatedSprite2D" parent="." unique_id=1981799782]
+position = Vector2(579, 413.00003)
+scale = Vector2(0.85787034, 0.8578704)
+sprite_frames = SubResource("SpriteFrames_87jk0")
+frame_progress = 0.6748723
+
 [node name="mobPath1" type="Path2D" parent="." unique_id=1943513510]
 curve = SubResource("Curve2D_0yogx")
 
@@ -504,12 +510,6 @@ mob_scene = ExtResource("2_gkhf7")
 position = Vector2(578, 325.00003)
 scale = Vector2(0.61111104, 0.611111)
 texture = ExtResource("8_lorjv")
-
-[node name="krobusChain" type="AnimatedSprite2D" parent="." unique_id=1981799782]
-position = Vector2(579, 413.00003)
-scale = Vector2(0.85787034, 0.8578704)
-sprite_frames = SubResource("SpriteFrames_87jk0")
-frame_progress = 0.6748723
 
 [node name="steeringWheel" type="AnimatedSprite2D" parent="." unique_id=1480555663]
 position = Vector2(569, 336)
